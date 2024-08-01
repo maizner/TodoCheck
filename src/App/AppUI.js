@@ -9,6 +9,7 @@ import { TodosError } from '../TodosError/TodosError';
 import { TodosInitState } from '../TodosInitState/TodosInitState'; 
 import { TodosEmptyState } from '../TodosEmptyState/TodosEmptyState';
 import { Modal } from '../Modal/Modal';
+import { TodoForm } from '../TodoForm/TodoForm';
 import { TodoContext } from '../TodoContext/TodoContext';
 
 // Aprendemos a consumer de dos formas el contexto. Esta es con TodoContext.Consumer
@@ -21,7 +22,6 @@ function AppUI() {
         onCompleteTodoAction,
         onDeleteTodoAction,
         openModal,
-        setOpenModal,
     } = React.useContext(TodoContext);
 
     return (
@@ -60,7 +60,7 @@ function AppUI() {
 
             {openModal &&(
                 <Modal>
-                    La funcionalidad de agregar un TODO
+                    <TodoForm />
                 </Modal>
             )}
         </>

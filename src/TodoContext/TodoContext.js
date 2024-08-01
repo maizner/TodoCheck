@@ -55,6 +55,17 @@ function TodoProvider ({children}) {
         newTodos.splice(todoIndex, 1);
         savePersistedTodo(newTodos);
     }
+    
+    // Acción de crear un todo
+    const onCreateTodoAction = (text) => {
+        const newTodos = [...todos];
+        
+        newTodos.push({
+            text: text, 
+            completed: false 
+        });
+        savePersistedTodo(newTodos);
+    }
 
     return (
         <TodoContext.Provider value={{
@@ -67,6 +78,7 @@ function TodoProvider ({children}) {
             searchedTodos,
             onCompleteTodoAction,
             onDeleteTodoAction,
+            onCreateTodoAction,
             openModal,
             setOpenModal,
         }}>
