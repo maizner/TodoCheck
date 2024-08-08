@@ -11,7 +11,8 @@ function TodoSearch() {
   
   return (
     <div className="TodoSearchContainer">
-      <IoSearchOutline className="Icon Icon-search" />
+      <IoSearchOutline className="Icon Icon-search " />
+
       <input
             placeholder="¿Qué tarea estás buscando?"
             className="TodoSearch"

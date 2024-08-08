@@ -20,8 +20,8 @@ function TodoCounter(){
 
         // }}>
         <h1 className='TodoCounter'>
-            Has completado <span>{completedTodosCount}</span> 
-            de <span>{totalTodosCount}</span> TODOs
+            Has completado <span>{completedTodosCount} </span> 
+            / <span>{totalTodosCount}</span> TODOs
         </h1>
     );
     
