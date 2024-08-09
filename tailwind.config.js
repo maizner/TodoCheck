@@ -11,6 +11,7 @@ module.exports = {
         'td-primary-1': '#ADB0D7',
         'td-primary-2': '#E3CFE6',
         'td-primary-emphasis':'#DE83B0',
+        'td-secondary-darken':'#1B1C2D',
         'td-secondary-0':'#323452',
         'td-secondary-1':'#353757',
         'td-secondary-2':'#42445F',

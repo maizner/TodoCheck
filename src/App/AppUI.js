@@ -5,9 +5,9 @@ import { TodoCounter } from '../TodoCounter/TodoCounter';
 import { TodoList } from '../TodoList/TodoList';
 import { TodoItem } from '../TodoItem/TodoItem';
 import { TodoCreateButton } from '../TodoCreateButton/TodoCreateButton';
-import { TodosLoading } from '../TodosLoading/TodosLoading';
 import { TodosError } from '../TodosError/TodosError';
-import { TodosInitState } from '../TodosInitState/TodosInitState'; 
+import { TodosLoading } from '../TodosEmptyState/TodosLoading';
+import { TodosInitState } from '../TodosEmptyState/TodosInitState'; 
 import { TodosEmptyState } from '../TodosEmptyState/TodosEmptyState';
 import { Modal } from '../Modal/Modal';
 import { TodoForm } from '../TodoForm/TodoForm';
@@ -31,7 +31,7 @@ function AppUI() {
             <div className='w-full flex flex-row content-center justify-center py-6 px-8'>
                 <img src={logo} className="" alt="logo" />
             </div>
-            <div className='flex flex-col content-center justify-center max-w-[580px] w-full'>
+            <div className='flex flex-col content-center justify-center max-w-[580px] w-full px-8 py-10 bg-td-secondary-1 rounded-lg shadow-lg shadow-td-secondary-darken/10 '>
                 <TodoNav />
                 <TodoCounter />
 

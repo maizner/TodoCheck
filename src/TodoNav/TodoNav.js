@@ -5,7 +5,7 @@ import { TodoSearch } from "../TodoSearch/TodoSearch";
 function TodoNav() {
 
     return(
-        <div className="flex flex-row items-center justify-between w-full h-full ">
+        <div className="flex flex-col items-center justify-center w-full h-full md:flex-row md:justify-between">
             <Avatar />
             <TodoSearch />
         </div>
