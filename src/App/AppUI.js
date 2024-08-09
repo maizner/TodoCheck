@@ -5,14 +5,15 @@ import { TodoCounter } from '../TodoCounter/TodoCounter';
 import { TodoList } from '../TodoList/TodoList';
 import { TodoItem } from '../TodoItem/TodoItem';
 import { TodoCreateButton } from '../TodoCreateButton/TodoCreateButton';
-import { TodosError } from '../TodosError/TodosError';
-import { TodosLoading } from '../TodosEmptyState/TodosLoading';
-import { TodosInitState } from '../TodosEmptyState/TodosInitState'; 
-import { TodosEmptyState } from '../TodosEmptyState/TodosEmptyState';
+import { TodosError } from '../TodosEmptyStates/TodosError';
+import { TodosLoading } from '../TodosEmptyStates/TodosLoading';
+import { TodosInitState } from '../TodosEmptyStates/TodosInitState'; 
+import { TodosEmptyState } from '../TodosEmptyStates/TodosEmptySearch';
 import { Modal } from '../Modal/Modal';
 import { TodoForm } from '../TodoForm/TodoForm';
 import { TodoNav } from '../TodoNav/TodoNav';
 import { TodoContext } from '../TodoContext/TodoContext';
+import { TodoFilterButton } from '../TodoFilterButton/TodoFilterButton';
 
 // Aprendemos a consumer de dos formas el contexto. Esta es con TodoContext.Consumer
 function AppUI() {
@@ -32,8 +33,14 @@ function AppUI() {
                 <img src={logo} className="" alt="logo" />
             </div>
             <div className='flex flex-col content-center justify-center max-w-[580px] w-full px-8 py-10 bg-td-secondary-1 rounded-lg shadow-lg shadow-td-secondary-darken/10 '>
+
+
                 <TodoNav />
-                <TodoCounter />
+
+                <div className='flex flex-col md:flex-row justify-center md:justify-between my-8'>
+                    <TodoCounter />
+                    <TodoFilterButton />
+                </div>
 
                 <TodoList>  
                     {loading && 
@@ -71,8 +78,8 @@ function AppUI() {
                 )}
             </div>
             <div className='w-full flex flex-row content-center justify-center py-6 px-8'>
-                <a href="#">
-                <img src={signature} className="" alt="contact me" />
+                <a rel="noreferrer" target="_blank" href="https://maiaaizner.notion.site/Hola-Soy-Maia-f94d9bae762849e682e2e9a60c4fce69">
+                    <img src={signature} className="" alt="contact me" />
                 </a>
             </div>
         </>

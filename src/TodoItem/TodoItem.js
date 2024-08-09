@@ -1,11 +1,11 @@
 import React from 'react'; 
 import { IoCloseOutline, IoRadioButtonOff, IoCheckmarkCircle } from "react-icons/io5";
-import './TodoItem.css';
 
 function TodoItem(props) {
     return (
         <li 
-            className={`TodoItem ${props.completed && "TodoItem--active"}`}
+            className={`TodoItem flex flex-row items-center justify-between bg-td-secondary-2 relative rounded-md mt-1 w-full cursor-pointer  hover:bg-td-secondary-emphasis
+                ${props.completed && "bg-td-secondary-emphasis"}`}
             onClick={props.onComplete}
         >
             <span 
@@ -17,15 +17,21 @@ function TodoItem(props) {
             <p className={`TodoItem-p ${props.completed && "TodoItem-p--complete"}`}>
                 {props.text}
             </p>
-            <span 
-                className="Icon Icon-delete"
-                onClick={(e) => {
-                    e.stopPropagation(); // Evita que el clic en eliminar también complete la tarea
-                    props.onDelete();
-                }}
-            >
-                <IoCloseOutline />
-            </span>
+            <div className='max-w-9'>
+                <span className="Icon Icon-edit">
+                Edit
+                </span>
+                <span 
+                    className="Icon Icon-delete"
+                    onClick={(e) => {
+                        e.stopPropagation(); // Evita que el clic en eliminar también complete la tarea
+                        props.onDelete();
+                    }}
+                >
+                    <IoCloseOutline />
+                </span>
+            </div>
+           
         </li>
     );
 }

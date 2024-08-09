@@ -19,6 +19,9 @@ module.exports = {
         
         'custom-dark': '#1C1C1C', 
       },
+      fontFamily: {
+        raleway: ['Raleway', 'sans-serif'],
+      },
     },
   },
   plugins: [],

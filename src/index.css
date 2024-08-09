@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    margin: 0;
+    font-family:'Raleway', 'Arial', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #323452;
+    color: #ffffff;
+  
+  }
+  body #root{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }

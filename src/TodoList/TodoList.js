@@ -1,11 +1,14 @@
 import React from 'react'; 
-import './TodoList.css';
+
 
 function TodoList(props){
     return (
-        <ul className='TodoList'>
-            {props.children}
-        </ul>
+        <div>
+            <h2 className='font-raleway font-normal text-[22px]'>Tareas</h2>
+            <ul className='TodoList min-h-[400]'>
+                {props.children}
+            </ul>
+        </div>
         );
    
 }

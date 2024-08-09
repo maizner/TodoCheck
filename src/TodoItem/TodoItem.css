@@ -1,16 +1,4 @@
-.TodoItem {
-  background-color: #363636;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 24px;
-  border-radius: 4px;
-  width: 100%;
-  border: 1px solid #262626;
-  box-shadow: 0px 5px 50px rgb(75 34 93 / 15%);
-  cursor:pointer;
-}
+/* 
 .TodoItem:hover{
   background-color: #1f4821;
 }
@@ -21,8 +9,8 @@
 }
 .TodoItem--active:hover{
   background-color: #363636;
-}
-.TodoItem-p {
+} */
+/* .TodoItem-p {
   margin: 24px 0 24px 24px;
   width: calc(100% - 120px);
   font-size: 16px;
@@ -31,9 +19,9 @@
 }
 .TodoItem-p--complete {
   text-decoration: line-through;
-}
+} */
 
-.Icon {
+/* .Icon {
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -42,10 +30,10 @@
   width: 48px;
   font-size: 24px;
   font-weight: bold;
-  /* background-color: #CCC; */
-}
 
-.Icon-check {
+} */
+
+/* .Icon-check {
   position: absolute;
   left: 12px;
 }
@@ -60,4 +48,4 @@
 }
 .Icon-delete:hover {
   color: red;
-}
+} */
