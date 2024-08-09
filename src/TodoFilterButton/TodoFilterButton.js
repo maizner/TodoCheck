@@ -1,5 +1,5 @@
 import React from "react";
-import { ReactComponent as Icon } from '../td-linear-icon-flag.svg';
+import { ReactComponent as Icon } from '../icon-linear-flag.svg';
 import { MdOutlineChevronRight } from "react-icons/md";
 
 
