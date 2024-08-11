@@ -8,6 +8,7 @@ function TodoNav() {
         <div className="flex flex-col items-center justify-center w-full h-full md:flex-row md:justify-between">
             <Avatar />
             <TodoSearch />
+            
         </div>
     );
 }

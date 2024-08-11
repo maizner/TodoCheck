@@ -29,9 +29,10 @@ function TodoForm(){
         <div className="text-center">
             
             <form className="todoform" onSubmit={onSubmit}>
-            <label className="text-xl font-bold mb-4 text-black">Escribe tu nuevo TODO</label>
+            <label className="text-xl font-semibold text-white my-8">Crear nueva tarea</label>
                 <textarea
-                    className="border border-gray-300 rounded w-full py-2 px-4 mb-4"
+                    className="bg-td-secondary-emphasis border-none w-full min-h-32 p-2 pl-10 focus:outline-none focus:ring-2 focus:ring-td-primary-0 rounded-md focus:shadow-td-primary-0 focus:shadow-md
+            font-raleway font-normal placeholder:text-td-primary-2 text-white text-[16px]"
                     placeholder="Animate y agregá tu nueva tarea"
                     value={newTodoValue}
                     onChange ={onChange}

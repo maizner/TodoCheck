@@ -16,11 +16,18 @@ module.exports = {
         'td-secondary-1':'#353757',
         'td-secondary-2':'#42445F',
         'td-secondary-emphasis':'#4B4D6E',
+        'td-error':'#FF763B',
         
         'custom-dark': '#1C1C1C', 
       },
       fontFamily: {
         raleway: ['Raleway', 'sans-serif'],
+      },
+      fontSize: {
+        md: '1rem', /*16px*/
+      },
+      boxShadow: {
+        'custom-purple': '0px 5px 25px rgba(156, 97, 250, 0.5)',
       },
     },
   },
