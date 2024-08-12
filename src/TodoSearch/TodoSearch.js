@@ -15,7 +15,7 @@ function TodoSearch() {
     
       <input
             className="bg-transparent border-none w-full h-[43px] p-2 pl-10 focus:outline-none focus:ring-2 focus:ring-td-primary-0 rounded-md focus:shadow-td-primary-0 focus:shadow-md
-            font-raleway font-normal placeholder:text-td-primary-2 text-white text-[16px]"
+            font-raleway font-normal placeholder:text-td-primary-2 text-white text-sm"
             placeholder="Busca Tareas Aquí..."
             value={searchTerm}
             onChange={(event) => {

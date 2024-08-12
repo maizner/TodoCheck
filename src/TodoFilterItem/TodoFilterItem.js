@@ -10,7 +10,7 @@ function TodoFilterItem(props){
 
     return (
 
-        <li className='flex flex-row items-center px-3 py-2 hover:bg-td-secondary-emphasis'>
+        <li className='flex flex-row items-center px-3 py-2 hover:bg-td-secondary-emphasis cursor-pointer'>
             <IconFill width="15" height="15" className={`${props.color} mr-2`} />
             {props.children}
         </li>
