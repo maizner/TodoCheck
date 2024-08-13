@@ -4,9 +4,9 @@ import { ReactComponent as IconFlag } from '../icon-fill-flag.svg';
 import { TodoContext } from '../TodoContext/TodoContext';
 
 function TodoForm() {
-    const { onCreateTodoAction, setOpenModal } = React.useContext(TodoContext);
+    const { onCreateTodoAction, setOpenModal, priorities } = React.useContext(TodoContext);
     const [newTodoValue, setNewTodoValue] = React.useState('');
-    const [priority, setPriority] = React.useState('Baja'); // Estado para la prioridad
+    const [priority, setPriority] = React.useState('baja'); // Estado para la prioridad
 
     const onSubmit = (e) => {
         e.preventDefault();
@@ -39,24 +39,24 @@ function TodoForm() {
                 <div className="flex flex-col gap-1 items-start w-full">
                     <label className="text-md font-normal text-white">Prioridad</label>
                     <div className="flex flex-row gap-2 w-full">
-                        {['Baja', 'Normal', 'Alta', 'Urgente'].map((level) => {
-                            const isSelected = priority === level;
+                        {Object.entries(priorities).map(([key, { name, color }]) => {
+                            const isSelected = priority === key;
                             const className = `
                                 flex flex-row items-center justify-center border-2 font-normal py-2 px-4 max-h-9 rounded-full text-sm transition-colors duration-300 ease-out w-full
-                                border-${level.toLowerCase()}
-                                ${isSelected ? `bg-${level.toLowerCase()} bg-opacity-80` : 'bg-transparent'}
-                                hover:bg-${level.toLowerCase()}
-                                active:bg-${level.toLowerCase()}
+                                border-${color}
+                                ${isSelected ? `bg-${color} bg-opacity-80` : 'bg-transparent'}
+                                hover:bg-${color}
+                                active:bg-${color}
                             `;
                             return (
                                 <button
                                     type="button"
-                                    key={level}
+                                    key={key}
                                     className={className}
-                                    onClick={() => setPriority(level)}
+                                    onClick={() => setPriority(key)}
                                 >
                                     <IconFlag width="16" height="16" className="mx-1" />
-                                    {level}
+                                    {name}
                                 </button>
                             );
                         })}

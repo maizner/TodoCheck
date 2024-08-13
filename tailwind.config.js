@@ -5,13 +5,15 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
     
   ],
+
+
   safelist: [
     {
-      pattern: /^border-(baja|normal|alta|urgente)$/,
+      pattern: /^border-(gray|blue|yellow|red)-500$/,
       variants: ['hover', 'active'],
     },
     {
-      pattern: /^bg-(baja|normal|alta|urgente)$/,
+      pattern: /^bg-(gray|blue|yellow|red)-500$/,
       variants: ['hover', 'active'],
     },
   ],
@@ -30,10 +32,7 @@ module.exports = {
         'td-secondary-2':'#42445F',
         'td-secondary-emphasis':'#4B4D6E',
         'td-error':'#FF763B',
-        'baja':'#717372',
-        'normal':'#D7F0FF',
-        'alta':'#FFC802',
-        'urgente':'#E13322',
+
       },
       fontFamily: {
         raleway: ['Raleway', 'sans-serif'],
