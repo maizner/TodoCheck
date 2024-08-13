@@ -12,10 +12,8 @@ function TodoItem(props) {
                 ${props.completed && "bg-td-secondary-emphasis"}`}
             onClick={props.onComplete}
         >
-            <span 
-                className={`Icon Icon-check ${props.completed && "Icon-check--active"}`}
-            >
-                {/* Esta es la forma de decir si completed es true. Con el signo fr pregunta y la igualación */}
+            <span >
+                {/* Esta es la forma de decir si completed es true. Con el signo de pregunta y la igualación */}
                 {props.completed ? 
                 <IoCheckmarkCircle className='w-6 h-6 text-td-primary-0'/>
                  : 

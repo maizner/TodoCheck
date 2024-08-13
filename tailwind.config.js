@@ -1,8 +1,21 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
+    
     "./src/**/*.{js,jsx,ts,tsx}",
+    
   ],
+  safelist: [
+    {
+      pattern: /^border-(baja|normal|alta|urgente)$/,
+      variants: ['hover', 'active'],
+    },
+    {
+      pattern: /^bg-(baja|normal|alta|urgente)$/,
+      variants: ['hover', 'active'],
+    },
+  ],
+  
   theme: {
     extend: {
       colors: {
@@ -17,8 +30,10 @@ module.exports = {
         'td-secondary-2':'#42445F',
         'td-secondary-emphasis':'#4B4D6E',
         'td-error':'#FF763B',
-        
-        'custom-dark': '#1C1C1C', 
+        'baja':'#717372',
+        'normal':'#D7F0FF',
+        'alta':'#FFC802',
+        'urgente':'#E13322',
       },
       fontFamily: {
         raleway: ['Raleway', 'sans-serif'],
@@ -29,6 +44,8 @@ module.exports = {
       boxShadow: {
         'custom-purple': '0px 5px 25px rgba(156, 97, 250, 0.5)',
       },
+      
+      
     },
   },
   plugins: [],

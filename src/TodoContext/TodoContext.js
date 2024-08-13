@@ -57,12 +57,13 @@ function TodoProvider ({children}) {
     }
     
     // Acción de crear un todo
-    const onCreateTodoAction = (text) => {
+    const onCreateTodoAction = (text, priority) => {
         const newTodos = [...todos];
         
         newTodos.push({
             text: text, 
-            completed: false 
+            completed: false,
+            priority: priority || 'Normal' // Asignar la prioridad
         });
         savePersistedTodo(newTodos);
     }
