@@ -64,15 +64,14 @@ function useLocalStorage(itemName, initialValue){
 export { useLocalStorage }
 
 // const defaultTodos = [
-//     { text: 'La información de la completitud debe estar fija', completed: false, priority: 'low' },
-//     { text: 'Poder destildar un TODO si te arrepentís', completed: true, priority: 'medium' },
-//     { text: 'Que la selección se pueda manejar desde el item', completed: true, priority: 'high' },
-//     { text: 'Mensaje de empty state cuando hayas completado todos los TODOS', completed: false, priority: 'low' },
-//     { text: 'Mensaje popup bloqueante antes de eliminar un TODO', completed: false, priority: 'medium' },
-//     { text: 'Agregar astilla de porcentaje de completitud', completed: false, priority: 'high' },
-//     { text: 'Edición de TODOs (TODOs editables con lapicito)', completed: false, priority: 'medium' },
-//     { text: 'Tomar curso : https://platzi.com/cursos/arrays/', completed: false, priority: 'low' },
-//     { text: 'Los TODOs completos pasen visualmente a otro lado para ser eliminados', completed: false, priority: 'high' },
+//     { text: 'Mobile App Research', completed: false, priority: 'baja'},
+//     { text: 'Poder destildar un TODO si te arrepentís', completed: true, priority: 'normal' },
+//     { text: 'Que la selección se pueda manejar desde el item', completed: true, priority: 'alta' },
+//     { text: 'Mensaje de empty state cuando hayas completado todos los TODOS', completed: false, priority: 'urgente' },
+//     { text: 'Mensaje popup bloqueante antes de eliminar un TODO', completed: false, priority: 'normal' },
+//     { text: 'Agregar astilla de porcentaje de completitud', completed: true, priority: 'alta' },
+//     { text: 'Edición de TODOs (TODOs editables con lapicito)', completed: false, priority: 'baja' },
+
 //   ];
   
 //   localStorage.setItem('TODOS_V1', JSON.stringify(defaultTodos));

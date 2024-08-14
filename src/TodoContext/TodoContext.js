@@ -79,6 +79,7 @@ function TodoProvider({ children }) {
         <TodoContext.Provider value={{
             loading,
             error,
+            todos,
             completedTodosCount,
             totalTodosCount,
             searchTerm,

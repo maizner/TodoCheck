@@ -12,6 +12,7 @@ function TodoItem(props) {
     const { 
         priorities,
     } = React.useContext(TodoContext);
+    
     const priorityColor = priorities[props.priority]?.color;
 
     
@@ -20,15 +21,20 @@ function TodoItem(props) {
     return (
         <li 
             className={`TodoItem flex flex-row items-center justify-between bg-td-secondary-2 relative rounded-md mt-1 w-full cursor-pointer  hover:bg-td-secondary-emphasis py-3 px-3 border-l-[15px]
-                ${props.completed ? 'border-green-500 bg-td-secondary-emphasis' : `border-${priorityColor}`} `}
+                ${props.completed ? 
+                    'border-green-500 bg-td-secondary-emphasis' 
+                    : 
+                    `border-${priorityColor}`
+                } `}
             onClick={props.onComplete}
         >
             <span >
-                {/* Esta es la forma de decir si completed es true. Con el signo de pregunta y la igualación */}
+
                 {props.completed ? 
-                <IoCheckmarkCircle className='w-6 h-6 text-td-primary-0'/>
-                 : 
-                <IoRadioButtonOff className='w-6 h-6 text-td-primary-0'/>}
+                    <IoCheckmarkCircle className='w-6 h-6 text-td-primary-0'/>
+                    : 
+                    <IoRadioButtonOff className='w-6 h-6 text-td-primary-0'/>
+                }
             </span>
             <div className='flex flex-col text-left w-full px-2 py-1 text-md'>
                 <p className={`TodoItem-p ${props.completed && "TodoItem-p--complete"}`}>
