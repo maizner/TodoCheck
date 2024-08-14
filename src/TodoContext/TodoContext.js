@@ -3,14 +3,17 @@ import { useLocalStorage } from './useLocalStorage';
 
 const TodoContext = React.createContext();
 
-const PRIORITY_CLASSES = {
-    baja: { name: 'Baja', color: 'gray-500' },
-    normal: { name: 'Normal', color: 'blue-500' },
-    alta: { name: 'Alta', color: 'yellow-500' },
-    urgente: { name: 'Urgente', color: 'red-500' },
-};
 
 function TodoProvider({ children }) {
+    
+
+    const [priorities, setPriorities] = React.useState({
+        baja: { name: 'Baja', color: 'gray-500' },
+        normal: { name: 'Normal', color: 'blue-500' },
+        alta: { name: 'Alta', color: 'yellow-500' },
+        urgente: { name: 'Urgente', color: 'red-500' },
+    });
+    
     const {
         item: todos,
         savePersistedItem: savePersistedTodo,
@@ -56,12 +59,18 @@ function TodoProvider({ children }) {
     }
 
     const onCreateTodoAction = (text, priority) => {
+
+        if (!priorities[priority]) {
+            console.error('Prioridad inválida:', priority);
+            return;
+        }
+       
         const newTodos = [...todos];
         
         newTodos.push({
             text: text, 
             completed: false,
-            priority: priority || 'normal' // Asignar la prioridad por defecto
+            priority: priority 
         });
         savePersistedTodo(newTodos);
     }
@@ -80,7 +89,7 @@ function TodoProvider({ children }) {
             onCreateTodoAction,
             openModal,
             setOpenModal,
-            priorities: PRIORITY_CLASSES, // Agregar prioridades al contexto
+            priorities, 
         }}>
             {children}
         </TodoContext.Provider>

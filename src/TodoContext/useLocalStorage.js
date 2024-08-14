@@ -64,16 +64,16 @@ function useLocalStorage(itemName, initialValue){
 export { useLocalStorage }
 
 // const defaultTodos = [
-//     { text: 'La información de la completitud debe estar fija', completed: false },
-//     { text: 'Poder destildar un TODO si te arrepentís', completed: true },
-//     { text: 'Que la selección se pueda manejar desde el item', completed: true },
-//     { text: 'Mensaje de empty state cuando hayas completado todos los TODOS', completed: false },
-//     { text: 'Mensaje popup bloqueante antes de eliminar un TODO', completed: false },
-//     { text: 'Agregar astilla de porcentaje de completitud', completed: false },
-//     { text: 'Edición de TODOs (TODOs editables con lapicito)', completed: false },
-//     { text: 'Tomar curso : https://platzi.com/cursos/arrays/', completed: false },
-//     { text: 'Los TODOs completos pasen visualmente a otro lado para ser eliminados', completed: false },
-// ];
-
-// localStorage.setItem('TODOS_V1', JSON.stringify(defaultTodos))
+//     { text: 'La información de la completitud debe estar fija', completed: false, priority: 'low' },
+//     { text: 'Poder destildar un TODO si te arrepentís', completed: true, priority: 'medium' },
+//     { text: 'Que la selección se pueda manejar desde el item', completed: true, priority: 'high' },
+//     { text: 'Mensaje de empty state cuando hayas completado todos los TODOS', completed: false, priority: 'low' },
+//     { text: 'Mensaje popup bloqueante antes de eliminar un TODO', completed: false, priority: 'medium' },
+//     { text: 'Agregar astilla de porcentaje de completitud', completed: false, priority: 'high' },
+//     { text: 'Edición de TODOs (TODOs editables con lapicito)', completed: false, priority: 'medium' },
+//     { text: 'Tomar curso : https://platzi.com/cursos/arrays/', completed: false, priority: 'low' },
+//     { text: 'Los TODOs completos pasen visualmente a otro lado para ser eliminados', completed: false, priority: 'high' },
+//   ];
+  
+//   localStorage.setItem('TODOS_V1', JSON.stringify(defaultTodos));
 // localStorage.removeItem('TODOS_V1')

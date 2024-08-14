@@ -22,7 +22,7 @@ function Avatar (){
                 sizes="(max-width: 600px) 100vw, 50vw"
                 className="block" alt="Maia Aizner" 
             />
-            <p className={`flex items-center justify-center rounded-full text-white w-[15px] h-[15px] text-[10px] font-bold absolute z-20 right-0 bottom-[-3px] ${totalTodosCount === 0|| completedTodosCount === totalTodosCount ? 'bg-green-400' : 'bg-td-error'}   `}>
+            <p className={`flex items-center justify-center rounded-full text-white w-[15px] h-[15px] text-[10px] font-bold absolute z-20 right-0 bottom-[-3px] ${totalTodosCount === 0|| completedTodosCount === totalTodosCount ? 'bg-green-500' : 'bg-td-error'}   `}>
                 {totalTodosCount}
             </p>
         </div>

@@ -16,6 +16,10 @@ module.exports = {
       pattern: /^bg-(gray|blue|yellow|red)-500$/,
       variants: ['hover', 'active'],
     },
+    {
+      pattern: /^text-(gray|blue|yellow|red)-500$/,
+      variants: ['hover', 'active'],
+    },
   ],
   
   theme: {
@@ -32,7 +36,6 @@ module.exports = {
         'td-secondary-2':'#42445F',
         'td-secondary-emphasis':'#4B4D6E',
         'td-error':'#FF763B',
-
       },
       fontFamily: {
         raleway: ['Raleway', 'sans-serif'],

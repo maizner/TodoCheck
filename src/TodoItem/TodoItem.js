@@ -4,12 +4,23 @@ import { ReactComponent as IconCalendar } from '../icon-calendar.svg';
 import { ReactComponent as IconDelete } from '../icon-delete.svg';
 import { ReactComponent as IconEdit} from '../icon-edit.svg';
 import { IoRadioButtonOff, IoCheckmarkCircle } from "react-icons/io5";
+import { TodoContext } from '../TodoContext/TodoContext';
 
 function TodoItem(props) {
+
+    
+    const { 
+        priorities,
+    } = React.useContext(TodoContext);
+    const priorityColor = priorities[props.priority]?.color;
+
+    
+
+
     return (
         <li 
-            className={`TodoItem flex flex-row items-center justify-between bg-td-secondary-2 relative rounded-md mt-1 w-full cursor-pointer  hover:bg-td-secondary-emphasis border-l-[15px] py-3 px-3
-                ${props.completed && "bg-td-secondary-emphasis"}`}
+            className={`TodoItem flex flex-row items-center justify-between bg-td-secondary-2 relative rounded-md mt-1 w-full cursor-pointer  hover:bg-td-secondary-emphasis py-3 px-3 border-l-[15px]
+                ${props.completed ? 'border-green-500 bg-td-secondary-emphasis' : `border-${priorityColor}`} `}
             onClick={props.onComplete}
         >
             <span >
@@ -26,7 +37,7 @@ function TodoItem(props) {
                 <div className='flex flex-row text-left w-full pr-2 items-center'>
                     <IconCalendar width="15" height="15"  className="mx-1 text-td-primary-2" />
                     <p className='font-raleway font-medium text-sm text-td-primary-2'>4 Oct</p>
-                    <IconFlag width="15" height="15"  className="mx-1 text-td-primary-2" />
+                    <IconFlag width="15" height="15"  className= {`mx-1 text-${priorityColor}`} />
                 </div>
             </div>
 
