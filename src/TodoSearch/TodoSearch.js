@@ -19,7 +19,7 @@ function TodoSearch() {
             placeholder="Busca Tareas Aquí..."
             value={searchTerm}
             onChange={(event) => {
-            console.log("El usuario escribió: " + event.target.value);
+            // console.log("El usuario escribió: " + event.target.value);
             setSearchTerm(event.target.value);
         }}
       />

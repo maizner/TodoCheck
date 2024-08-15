@@ -13,7 +13,8 @@ function TodoProvider({ children }) {
         alta: { name: 'Alta', color: 'yellow-500' },
         urgente: { name: 'Urgente', color: 'red-500' },
     });
-    
+
+
     const {
         item: todos,
         savePersistedItem: savePersistedTodo,
@@ -23,6 +24,8 @@ function TodoProvider({ children }) {
 
     const [searchTerm, setSearchTerm] = React.useState('');
     const [openModal, setOpenModal] = React.useState(false);
+    //Inicialmente los filtros tendran un estado nulo
+    const [selectedPriority, setSelectedPriority] = React.useState(null);
     
 
     const completedTodosCount = todos.filter(
@@ -38,6 +41,12 @@ function TodoProvider({ children }) {
             return lowerCaseTodoText.includes(lowerCaseSearchTerm);
         }
     );
+
+    const filteredTodos = todos.filter(
+        todo => !selectedPriority || todo.priority === selectedPriority
+    );
+
+
 
     const onCompleteTodoAction = (text) => {
         const newTodos = [...todos];
@@ -80,6 +89,10 @@ function TodoProvider({ children }) {
             loading,
             error,
             todos,
+            priorities, 
+            selectedPriority,
+            setSelectedPriority,
+            filteredTodos,
             completedTodosCount,
             totalTodosCount,
             searchTerm,
@@ -90,7 +103,7 @@ function TodoProvider({ children }) {
             onCreateTodoAction,
             openModal,
             setOpenModal,
-            priorities, 
+            
         }}>
             {children}
         </TodoContext.Provider>
