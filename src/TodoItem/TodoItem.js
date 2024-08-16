@@ -36,25 +36,29 @@ function TodoItem(props) {
                     <IoRadioButtonOff className='w-6 h-6 text-td-primary-0'/>
                 }
             </span>
-            <div className='flex flex-col text-left w-full px-2 py-1 text-md'>
-                <p className={`TodoItem-p ${props.completed && "TodoItem-p--complete"}`}>
+            <div className='flex flex-col text-left w-full px-2 py-1 text-md '>
+                <p className={`f-letter-capitalize ${props.completed && "line-through text-green-500"}`}>
                     {props.text}
                 </p>
                 <div className='flex flex-row text-left w-full pr-2 items-center'>
-                    <IconCalendar width="15" height="15"  className="mx-1 text-td-primary-2" />
-                    <p className='font-raleway font-medium text-sm text-td-primary-2'>4 Oct</p>
+
+                    <div className='flex flex-row mr-1'>
+                        <IconCalendar width="15" height="15"  className="mx-1 text-td-primary-2" />
+                        <p className='font-raleway font-medium text-sm text-td-primary-2'>4 Oct</p>
+                    </div>
                     <IconFlag width="15" height="15"  className= {`mx-1 text-${priorityColor}`} />
                 </div>
             </div>
 
             <div className='flex flex-row items-center '>
-                <span className="group"
+                {/* <span className="group"
                     onClick={(e) => {
                         e.stopPropagation(); 
                         // props.onEdit();
                     }}>
                     <IconEdit width="24" height="24"  className="mx-1 text-td-primary-1 group-hover:text-td-primary-0" />
-                </span>
+                </span> */}
+
                 <span className="group"
                     onClick={(e) => {
                         e.stopPropagation(); 

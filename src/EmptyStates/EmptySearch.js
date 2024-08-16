@@ -1,11 +1,18 @@
 import React from 'react';
+import { EmptyState } from './EmptyState';
+
 
 
 
 function TodosEmptyState() {
   return (
-   <p>No hay resultados para tu búsqueda</p>
-  );
+
+    < EmptyState 
+    iconName="NoSearch" 
+    title="No hay resultados" 
+    text="Prueba buscando algo diferente." 
+  />
+   );
 }
 
 export { TodosEmptyState };

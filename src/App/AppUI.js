@@ -6,7 +6,7 @@ import { TodoCreateButton } from '../TodoCreateButton/TodoCreateButton';
 import { TodosError } from '../EmptyStates/Error';
 import { TodosLoading } from '../EmptyStates/Loading';
 import { TodosInitState } from '../EmptyStates/InitState'; 
-import { TodosEmptyState } from '../EmptyStates/EmptySearch';
+import {TodosEmptyState } from '../EmptyStates/EmptySearch';
 import { Modal } from '../Modal/Modal';
 import { TodoForm } from '../TodoForm/TodoForm';
 import { TodoNav } from '../TodoNav/TodoNav';

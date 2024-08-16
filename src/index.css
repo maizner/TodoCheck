@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.f-letter-capitalize::first-letter {
+  @apply capitalize; /* Applies Tailwind's `capitalize` utility */
+}
+
 body {
     margin: 0;
     font-family:'Raleway', 'Arial', sans-serif;

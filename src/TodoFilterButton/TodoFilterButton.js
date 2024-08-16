@@ -11,7 +11,6 @@ function TodoFilterButton() {
         todos, 
         loading,
         setSelectedPriority,
-        filteredTodos,
     } = React.useContext(TodoContext);
 
     // function handleFilter(priorityName) {
@@ -20,7 +19,7 @@ function TodoFilterButton() {
     // }
 
     if (loading) {
-        return <div>Cargando...</div>; 
+        return <div className="text-sm text-td-primary-2">Cargando...</div>; 
     }
 
     // Obtener prioridades únicas de las tareas

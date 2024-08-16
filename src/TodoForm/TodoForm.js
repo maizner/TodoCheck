@@ -7,11 +7,19 @@ function TodoForm() {
     const { onCreateTodoAction, setOpenModal, priorities } = React.useContext(TodoContext);
     const [newTodoValue, setNewTodoValue] = React.useState('');
     const [priority, setPriority] = React.useState('baja'); // Estado para la prioridad
+    const [error, setError] = React.useState(false); // Estado para el manejo del error
+
 
     const onSubmit = (e) => {
         e.preventDefault();
+        if (newTodoValue.trim() === '') { // Validación para asegurar que no esté vacío
+            setError(true);
+            return;
+        }
+        setError(false);
         onCreateTodoAction(newTodoValue, priority);  // Crear el TODO con la prioridad
         setOpenModal(false);
+        
     };
 
     const onCancel = () => {
@@ -29,12 +37,15 @@ function TodoForm() {
                 <div className="w-full flex flex-col items-start gap-1">
                     <label className="text-md font-normal text-white">Descripción</label>
                     <textarea
-                        className="bg-td-secondary-2 border-none w-full min-h-32 p-2 focus:outline-none focus:ring-2 focus:ring-td-primary-0 rounded-md focus:shadow-td-primary-0 focus:shadow-md
-                        font-raleway font-normal placeholder:text-td-primary-2 text-white text-sm resize-none"
+                        className={`bg-td-secondary-2 border-none w-full min-h-32 p-2 focus:outline-none focus:ring-2 focus:ring-td-primary-0 rounded-md focus:shadow-td-primary-0 focus:shadow-md
+                            font-raleway font-normal placeholder:text-td-primary-2 text-white text-sm resize-none ${error ? ' border-1 border-td-error focus:ring-td-error focus:shadow-td-error' : ''}`}
                         placeholder="Escribí tu tarea acá"
                         value={newTodoValue}
                         onChange={onChange}
                     />
+                     {error && (
+                        <p className="text-td-error text-sm mt-1">La descripción de la tarea no puede estar vacía.</p>
+                    )}
                 </div>
                 <div className="flex flex-col gap-1 items-start w-full">
                     <label className="text-md font-normal text-white">Prioridad</label>
@@ -84,6 +95,7 @@ function TodoForm() {
                     <button
                         type="submit"
                         className="w-full bg-gradient-to-r from-td-primary-emphasis to-td-primary-0 font-raleway text-white font-semibold text-md rounded-md py-3 px-8 hover:from-td-primary-0 hover:to-td-primary-emphasis transition-colors duration-300 ease-out text-center items-center"
+
                     >
                         Crear tarea
                     </button>
