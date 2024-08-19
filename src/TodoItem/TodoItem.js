@@ -2,7 +2,6 @@ import React from 'react';
 import { ReactComponent as IconFlag } from '../icon-fill-flag.svg';
 import { ReactComponent as IconCalendar } from '../icon-calendar.svg';
 import { ReactComponent as IconDelete } from '../icon-delete.svg';
-import { ReactComponent as IconEdit} from '../icon-edit.svg';
 import { IoRadioButtonOff, IoCheckmarkCircle } from "react-icons/io5";
 import { TodoContext } from '../TodoContext/TodoContext';
 
@@ -64,7 +63,7 @@ function TodoItem(props) {
                         e.stopPropagation(); 
                         props.onDelete();
                     }}>
-                    <IconDelete width="24" height="24"  className="mx-1 text-td-primary-1 group-hover:text-td-error" />
+                    <IconDelete width="24" height="24"  className="mx-1 text-td-primary-1 group-hover:text-td-warning" />
                 </span>
             </div>
            

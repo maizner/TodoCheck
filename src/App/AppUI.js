@@ -6,7 +6,7 @@ import { TodoCreateButton } from '../TodoCreateButton/TodoCreateButton';
 import { TodosError } from '../EmptyStates/Error';
 import { TodosLoading } from '../EmptyStates/Loading';
 import { TodosInitState } from '../EmptyStates/InitState'; 
-import {TodosEmptyState } from '../EmptyStates/EmptySearch';
+import {TodosEmptySearch } from '../EmptyStates/EmptySearch';
 import { Modal } from '../Modal/Modal';
 import { TodoForm } from '../TodoForm/TodoForm';
 import { TodoNav } from '../TodoNav/TodoNav';
@@ -51,13 +51,14 @@ import { Header } from '../Header/Header';
                             {loading && 
                                 <TodosLoading /> 
                             }
+                            
                             {error && 
                                 <TodosError />
                             }
                             
                             {!loading && todosToRender.length === 0 ? (
                                 searchTerm ? (
-                                    <TodosEmptyState />
+                                    <TodosEmptySearch />
                                 ) : (
                                     <TodosInitState />
                                 )

@@ -1,10 +1,18 @@
 import React from 'react';
+import { EmptyState } from './EmptyState';
+
+
 
 
 
 function TodosError() {
   return (
-    <p>Hubo un error :S</p>
+    <EmptyState 
+      iconName="Error" 
+      title="Ups, algo salió mal" 
+      text="Estamos experimentando un problema inesperado. Por favor, vuelve a intentarlo más tarde." 
+    />
+
   );
 }
 

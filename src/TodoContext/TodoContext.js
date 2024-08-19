@@ -26,7 +26,26 @@ function TodoProvider({ children }) {
     const [openModal, setOpenModal] = React.useState(false);
     //Inicialmente los filtros tendran un estado nulo
     const [selectedPriority, setSelectedPriority] = React.useState(null);
+    const [filterIsVisible, setFilterIsVisible] = React.useState(false);
+    const [activeFilter, setActiveFilter] = React.useState([]);
     
+    
+    const toggleFilters = () => {
+        setFilterIsVisible((prevState) => !prevState);
+
+        
+    }
+
+
+
+    const clearFilters = () => {
+        setActiveFilter([]);
+        setSelectedPriority(null);  // Reiniciar la prioridad seleccionada
+        setFilterIsVisible(false);  // Cerrar el listado
+        console.log('Filtros limpiados');
+    }
+
+  
 
     const completedTodosCount = todos.filter(
         todoElem => !!todoElem.completed
@@ -42,9 +61,21 @@ function TodoProvider({ children }) {
         }
     );
 
-    const filteredTodos = todos.filter(
-        todo => !selectedPriority || todo.priority === selectedPriority
-    );
+    const filteredTodos = todos.filter((todoElem) => {
+        return !selectedPriority || todoElem.priority === selectedPriority;
+    });
+
+    const handleSelectPriority = (priority) => {
+        // Verificamos si la prioridad ya está seleccionada o no
+        if (!activeFilter.includes(priority)) {
+            // setActiveFilter([...activeFilter, priority]);
+            setActiveFilter((prevFilters) => [...prevFilters, priority]);
+
+        }
+        setSelectedPriority(priority);
+        setFilterIsVisible(false);  // Cerrar el menú
+        console.log('Prioridad seleccionada:', priority);
+    }
 
 
 
@@ -92,6 +123,12 @@ function TodoProvider({ children }) {
             priorities, 
             selectedPriority,
             setSelectedPriority,
+            filterIsVisible,
+            toggleFilters,
+            activeFilter,
+            setActiveFilter,
+            clearFilters,
+            handleSelectPriority,
             filteredTodos,
             completedTodosCount,
             totalTodosCount,

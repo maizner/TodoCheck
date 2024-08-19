@@ -35,7 +35,7 @@ module.exports = {
         'td-secondary-1':'#353757',
         'td-secondary-2':'#42445F',
         'td-secondary-emphasis':'#4B4D6E',
-        'td-error':'#FF763B',
+        'td-warning':'#FF763B',
       },
       fontFamily: {
         raleway: ['Raleway', 'sans-serif'],

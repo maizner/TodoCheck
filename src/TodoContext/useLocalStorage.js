@@ -64,13 +64,13 @@ function useLocalStorage(itemName, initialValue){
 export { useLocalStorage }
 
 // const defaultTodos = [
-//     { text: 'Mobile App Research', completed: false, priority: 'baja'},
-//     { text: 'Poder destildar un TODO si te arrepentís', completed: true, priority: 'normal' },
-//     { text: 'Que la selección se pueda manejar desde el item', completed: true, priority: 'alta' },
-//     { text: 'Mensaje de empty state cuando hayas completado todos los TODOS', completed: false, priority: 'urgente' },
-//     { text: 'Mensaje popup bloqueante antes de eliminar un TODO', completed: false, priority: 'normal' },
-//     { text: 'Agregar astilla de porcentaje de completitud', completed: true, priority: 'alta' },
-//     { text: 'Edición de TODOs (TODOs editables con lapicito)', completed: false, priority: 'baja' },
+//     { text: 'Mobile App Research', completed: false, priority: 'urgente'},
+//     { text: 'Prepare Wireframe for Main Flow', completed: true, priority: alta' },
+//     { text: 'Website Research', completed: true, priority: 'normal' },
+//     { text: 'Prepare Screens', completed: false, priority: 'baja' },
+//     { text: 'Blocking popup message', completed: false, priority: 'normal' },
+//     { text: 'Add a datepicker to this project', completed: true, priority: 'alta' },
+//     { text: 'Make editable all tasks', completed: false, priority: 'baja' },
 
 //   ];
   

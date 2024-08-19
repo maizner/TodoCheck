@@ -4,7 +4,7 @@ import { EmptyState } from './EmptyState';
 
 
 
-function TodosEmptyState() {
+function TodosEmptySearch() {
   return (
 
     < EmptyState 
@@ -15,4 +15,4 @@ function TodosEmptyState() {
    );
 }
 
-export { TodosEmptyState };
+export { TodosEmptySearch };

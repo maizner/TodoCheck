@@ -1,5 +1,5 @@
 # T✅Do Bien
-
+![Cover Image](cover-mvp.png)
 ¡Hola, Bienvenidos a T✅Do Bien!
 
 T✅Do Bien es una aplicación de lista de tareas diseñada para ayudarte a organizar tus tareas diarias de manera eficiente. Este proyecto está enfocado en proporcionar una interfaz intuitiva y funcional para gestionar tus pendientes, con características clave que incluyen:
@@ -41,6 +41,14 @@ Para comenzar con T✅Do Bien, sigue estos pasos:
 4. **Inicia la Aplicación:**
    ```bash
    npm start
+
+## Enlace al Diseño en Figma
+
+Puedes acceder al diseño del proyecto en Figma a través del siguiente enlace:
+
+[Diseño en Figma - Todo Bien](https://www.figma.com/design/GkZBg5chDOoR96RGzemphL/ToDo-Bien?node-id=574-15&t=yMzDLxrxI5sUXayC-1)
+
+
 
 ## Créditos y Reconocimientos
 Este proyecto fue desarrollado a partir del curso <a href="https://platzi.com/home/clases/7395-react/62326-que-necesitas-para-aprender-reactjs/"> ¿Qué necesitas para aprender React.js?</a> de Platzi. Damos crédito y agradecimiento a Platzi y a su instructor por proporcionar la base de este proyecto.

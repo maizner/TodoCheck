@@ -49,7 +49,7 @@ function TodoForm() {
                 </div>
                 <div className="flex flex-col gap-1 items-start w-full">
                     <label className="text-md font-normal text-white">Prioridad</label>
-                    <div className="flex flex-row gap-2 w-full">
+                    <div className="flex flex-row gap-2 w-full flex-wrap lg:flex-nowrap">
                         {Object.entries(priorities).map(([key, { name, color }]) => {
                             const isSelected = priority === key;
                             const className = `
