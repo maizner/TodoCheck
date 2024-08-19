@@ -9,7 +9,7 @@ function TodoProvider({ children }) {
 
     const [priorities, setPriorities] = React.useState({
         baja: { name: 'Baja', color: 'gray-500' },
-        normal: { name: 'Normal', color: 'blue-500' },
+        normal: { name: 'Normal', color: 'blue-200' },
         alta: { name: 'Alta', color: 'yellow-500' },
         urgente: { name: 'Urgente', color: 'red-500' },
     });

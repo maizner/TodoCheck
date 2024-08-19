@@ -7,20 +7,37 @@ module.exports = {
   ],
 
 
+
   safelist: [
+    // Para las clases de borde
     {
-      pattern: /^border-(gray|blue|yellow|red)-500$/,
+      pattern: /^border-(gray|yellow|red)-500$/,
       variants: ['hover', 'active'],
     },
     {
-      pattern: /^bg-(gray|blue|yellow|red)-500$/,
+      pattern: /^border-blue-200$/,
+      variants: ['hover', 'active'],
+    },
+    // Para las clases de fondo
+    {
+      pattern: /^bg-(gray|yellow|red)-500$/,
       variants: ['hover', 'active'],
     },
     {
-      pattern: /^text-(gray|blue|yellow|red)-500$/,
+      pattern: /^bg-blue-200$/,
+      variants: ['hover', 'active'],
+    },
+    // Para las clases de texto
+    {
+      pattern: /^text-(gray|yellow|red)-500$/,
+      variants: ['hover', 'active'],
+    },
+    {
+      pattern: /^text-blue-200$/,
       variants: ['hover', 'active'],
     },
   ],
+  
   
   theme: {
     extend: {
