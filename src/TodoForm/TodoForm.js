@@ -38,13 +38,13 @@ function TodoForm() {
                     <label className="text-md font-normal text-white">Descripción</label>
                     <textarea
                         className={`bg-td-secondary-2 border-none w-full min-h-32 p-2 focus:outline-none focus:ring-2 focus:ring-td-primary-0 rounded-md focus:shadow-td-primary-0 focus:shadow-md
-                            font-raleway font-normal placeholder:text-td-primary-2 text-white text-sm resize-none ${error ? ' border-1 border-td-error focus:ring-td-error focus:shadow-td-error' : ''}`}
+                            font-raleway font-normal placeholder:text-td-primary-2 text-white text-sm resize-none ${error ? ' border-1 border-td-warning focus:ring-td-warning focus:shadow-td-warning' : ''}`}
                         placeholder="Escribí tu tarea acá"
                         value={newTodoValue}
                         onChange={onChange}
                     />
                      {error && (
-                        <p className="text-td-error text-sm mt-1">La descripción de la tarea no puede estar vacía.</p>
+                        <p className="text-td-warning text-sm mt-1">La descripción de la tarea no puede estar vacía.</p>
                     )}
                 </div>
                 <div className="flex flex-col gap-1 items-start w-full">

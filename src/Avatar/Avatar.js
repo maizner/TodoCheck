@@ -15,7 +15,7 @@ function Avatar (){
  
     return (
 
-        <div className="relative">
+        <div className="relative mb-4">
             <img 
                 src={avatar1x} 
                 srcSet={`${avatar1x} 1x, ${avatar2x} 2x, ${avatar3x} 3x`} 

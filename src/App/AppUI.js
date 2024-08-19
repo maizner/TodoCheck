@@ -11,27 +11,40 @@ import { Modal } from '../Modal/Modal';
 import { TodoForm } from '../TodoForm/TodoForm';
 import { TodoNav } from '../TodoNav/TodoNav';
 import { TodoContext } from '../TodoContext/TodoContext';
-import { TodoFilterButton} from '../TodoFilterButton/TodoFilterButton';
+import { TodoFilterButtons} from '../TodoFilterButtons/TodoFilterButtons';
 import { Footer } from '../Footer/Footer';
 import { Header } from '../Header/Header';
 
 
-        // Aprendemos a consumer de dos formas el contexto. Esta es con TodoContext.Consumer
+        
         function AppUI() {
+
             const {
                 loading,
                 error,
                 searchTerm,
                 searchedTodos,
                 selectedPriority,
-                filteredTodos,
+                prioritizedTodos,
+                completedTodos,
                 onCompleteTodoAction,
                 onDeleteTodoAction,
+                handleSelectCompletedFilter,
                 openModal,
             } = React.useContext(TodoContext);
 
-             // Determine which list to render based on the presence of `selectedPriority` or `searchTerm`
-            const todosToRender = selectedPriority ? filteredTodos : searchedTodos;
+             // Determine which list to render based on the presence of `selectedPriority` or `searchTerm` or `completed`
+            let todosToRender;
+
+            if (selectedPriority) {
+                todosToRender = prioritizedTodos;
+            } else if (searchTerm) {
+                todosToRender = searchedTodos;
+            } else if(handleSelectCompletedFilter) {
+                todosToRender = completedTodos;
+            }
+          
+                
             return (
                 <>
                 < Header />
@@ -40,9 +53,9 @@ import { Header } from '../Header/Header';
 
                         <TodoNav />
 
-                        <div className='flex flex-col md:flex-row justify-center md:justify-between my-8'>
+                        <div className='flex flex-col md:flex-row justify-center md:justify-between my-4'>
                             <TodoCounter />
-                            <TodoFilterButton />
+                            <TodoFilterButtons />
                             
                             
                         </div>

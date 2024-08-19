@@ -10,7 +10,7 @@ function TodoCounter(){
     return (
 
  
-        <h1 className='TodoCounter font-raleway font-semibold  text-[24px] leading-[24px] md:max-w-48 '>
+        <h1 className='font-raleway font-semibold text-[22px] md:text-[24px] leading-[24px] md:max-w-48 my-4 md:my-0'>
             Has completado <span >{completedTodosCount} </span> 
             / <span>{totalTodosCount}</span> tareas
         </h1>

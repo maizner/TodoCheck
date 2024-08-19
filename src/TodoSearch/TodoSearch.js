@@ -9,7 +9,7 @@ function TodoSearch() {
   } = React.useContext(TodoContext);
   
   return (
-    <div className=" flex flex-row justify-between bg-td-secondary-2 w-full rounded-md relative max-w-[400px] h-[43px]">
+    <div className=" mb-4 flex flex-row justify-between bg-td-secondary-2 w-full rounded-md relative max-w-[400px] h-[43px]">
       <IoSearchOutline 
       className="flex p-2 mt-1 mb-1 text-gray-200 absolute top-0 left-0 bottom-0 z-10 w-9 h-9" />
     

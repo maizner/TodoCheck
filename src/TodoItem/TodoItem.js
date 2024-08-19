@@ -1,6 +1,6 @@
 import React from 'react'; 
 import { ReactComponent as IconFlag } from '../icon-fill-flag.svg';
-import { ReactComponent as IconCalendar } from '../icon-calendar.svg';
+// import { ReactComponent as IconCalendar } from '../icon-calendar.svg';
 import { ReactComponent as IconDelete } from '../icon-delete.svg';
 import { IoRadioButtonOff, IoCheckmarkCircle } from "react-icons/io5";
 import { TodoContext } from '../TodoContext/TodoContext';
@@ -13,6 +13,7 @@ function TodoItem(props) {
     } = React.useContext(TodoContext);
     
     const priorityColor = priorities[props.priority]?.color;
+    const priorityName = priorities[props.priority]?.name;
 
     
 
@@ -41,11 +42,16 @@ function TodoItem(props) {
                 </p>
                 <div className='flex flex-row text-left w-full pr-2 items-center'>
 
-                    <div className='flex flex-row mr-1'>
+                    {/* <div className='flex flex-row mr-1'>
                         <IconCalendar width="15" height="15"  className="mx-1 text-td-primary-2" />
                         <p className='font-raleway font-medium text-sm text-td-primary-2'>4 Oct</p>
+                    </div> */}
+                    <div className='flex flex-row mr-1'>
+                        <IconFlag width="12" height="12"  className= {`mx-1 text-${priorityColor}`} />
+
+                       
+                        <p className={`font-raleway font-medium text-[10px] text-${priorityColor}`}>{priorityName}</p>
                     </div>
-                    <IconFlag width="15" height="15"  className= {`mx-1 text-${priorityColor}`} />
                 </div>
             </div>
 

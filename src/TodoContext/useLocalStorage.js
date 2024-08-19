@@ -65,7 +65,7 @@ export { useLocalStorage }
 
 // const defaultTodos = [
 //     { text: 'Mobile App Research', completed: false, priority: 'urgente'},
-//     { text: 'Prepare Wireframe for Main Flow', completed: true, priority: alta' },
+//     { text: 'Prepare Wireframe for Main Flow', completed: true, priority: 'alta' },
 //     { text: 'Website Research', completed: true, priority: 'normal' },
 //     { text: 'Prepare Screens', completed: false, priority: 'baja' },
 //     { text: 'Blocking popup message', completed: false, priority: 'normal' },

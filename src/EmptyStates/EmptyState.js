@@ -1,10 +1,12 @@
 import React from 'react';
 import { ReactComponent as IllustrationNoSearch } from './EmptyState-NoSearch.svg';
 import { ReactComponent as IllustrationNoTask } from './EmptyState-NoTask.svg';
+import { ReactComponent as IllustrationError } from './EmptyState-Error.svg';
 
 const icons = {
   NoSearch: IllustrationNoSearch,
   NoTask: IllustrationNoTask,
+  Error: IllustrationError,
 };
 
 function EmptyState({ iconName, title, text }) {

@@ -28,19 +28,20 @@ function TodoProvider({ children }) {
     const [selectedPriority, setSelectedPriority] = React.useState(null);
     const [filterIsVisible, setFilterIsVisible] = React.useState(false);
     const [activeFilter, setActiveFilter] = React.useState([]);
+    const [completedFilter, setCompletedFilter] = React.useState(null);
+
     
+
     
     const toggleFilters = () => {
         setFilterIsVisible((prevState) => !prevState);
 
-        
     }
-
-
 
     const clearFilters = () => {
         setActiveFilter([]);
         setSelectedPriority(null);  // Reiniciar la prioridad seleccionada
+        setCompletedFilter(null);  // Limpiar el filtro de completado
         setFilterIsVisible(false);  // Cerrar el listado
         console.log('Filtros limpiados');
     }
@@ -61,14 +62,42 @@ function TodoProvider({ children }) {
         }
     );
 
-    const filteredTodos = todos.filter((todoElem) => {
-        return !selectedPriority || todoElem.priority === selectedPriority;
+   
+    const prioritizedTodos = todos.filter((todoElem) => {
+        const priorityMatch = 
+        !selectedPriority || todoElem.priority === selectedPriority;
+        const completedMatch = 
+        completedFilter === "completed" ? todoElem.completed :
+        completedFilter === "uncompleted" ? !todoElem.completed :
+        true;
+        return priorityMatch && completedMatch;;
     });
 
+    const completedTodos = todos.filter((todoElem) => {
+        const completedMatch = 
+            completedFilter === "completed" ? todoElem.completed :
+            completedFilter === "uncompleted" ? !todoElem.completed :
+            true;
+        return  completedMatch;
+    });
+
+    const handleSelectCompletedFilter = (filter) => {
+
+         // Verificamos si la prioridad ya está seleccionada o no
+         if (!activeFilter.includes(filter)) {
+
+            setActiveFilter((prevFilters) => [...prevFilters, filter]);
+
+        }
+        setCompletedFilter(filter);  // filter puede ser "completed", "uncompleted" o null
+        setFilterIsVisible(false);  // Cerrar el menú si es necesario
+    };
+
     const handleSelectPriority = (priority) => {
+
         // Verificamos si la prioridad ya está seleccionada o no
         if (!activeFilter.includes(priority)) {
-            // setActiveFilter([...activeFilter, priority]);
+
             setActiveFilter((prevFilters) => [...prevFilters, priority]);
 
         }
@@ -129,7 +158,9 @@ function TodoProvider({ children }) {
             setActiveFilter,
             clearFilters,
             handleSelectPriority,
-            filteredTodos,
+            handleSelectCompletedFilter,
+            prioritizedTodos, //Filtrar por prioridad
+            completedTodos, //Filtrar por completitud
             completedTodosCount,
             totalTodosCount,
             searchTerm,
