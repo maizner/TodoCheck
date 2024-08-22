@@ -64,18 +64,20 @@ Este proyecto fue creado con Create React App.
 
 - **Puedes ejecutar los siguientes scripts en el directorio del proyecto:**
    ```bash
+   npm start
+   npm run build
+   npm run eject
 npm start: Ejecuta la aplicación en modo de desarrollo.
 npm run build: Construye la aplicación para producción en la carpeta build.
 npm run eject: Copia todas las configuraciones para que puedas personalizarlas.
-Consulta la documentación de Create React App para más detalles.
+Consulta la documentación de [Create React App](https://create-react-app.dev/)  para más detalles.
 
 
 ## Contribuciones
-Si deseas contribuir a T✅Do Bien, siéntete libre de hacer un fork del repositorio, crear una nueva rama para tus cambios y enviar un pull request. ¡Apreciamos cualquier aporte que pueda mejorar la aplicación!
+Si deseas contribuir a T✅Do Bien, siéntete libre de hacer un fork del repositorio, crear una nueva rama para tus cambios y enviar un pull request. ¡Se aprecia cualquier aporte que pueda mejorar la aplicación!
 
 ## Contacto
 Para cualquier pregunta o sugerencia, puedes ponerte en contacto con el autor del proyecto en maiaaizner@gmail.com.
 
 
-Este formato incluye encabezados, listas y bloques de código para una presentación clara y ordenada en GitHub. ¡Espero que te sea útil!
 
