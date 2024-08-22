@@ -1,4 +1,3 @@
-# T✅Do Bien
 ![Cover Image](cover-mvp.png)
 ¡Hola, Bienvenidos a T✅Do Bien!
 
