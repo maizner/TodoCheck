@@ -7,7 +7,7 @@ const TodoContext = React.createContext();
 function TodoProvider({ children }) {
     
 
-    const [priorities, setPriorities] = React.useState({
+    const [priorities] = React.useState({
         baja: { name: 'Baja', color: 'gray-500' },
         normal: { name: 'Normal', color: 'blue-200' },
         alta: { name: 'Alta', color: 'yellow-500' },
@@ -24,7 +24,6 @@ function TodoProvider({ children }) {
 
     const [searchTerm, setSearchTerm] = React.useState('');
     const [openModal, setOpenModal] = React.useState(false);
-    //Inicialmente los filtros tendran un estado nulo
     const [selectedPriority, setSelectedPriority] = React.useState(null);
     const [filterIsVisible, setFilterIsVisible] = React.useState(false);
     const [activeFilter, setActiveFilter] = React.useState([]);
@@ -62,36 +61,40 @@ function TodoProvider({ children }) {
         }
     );
 
-   
-    const prioritizedTodos = todos.filter((todoElem) => {
-        const priorityMatch = 
-        !selectedPriority || todoElem.priority === selectedPriority;
-        const completedMatch = 
-        completedFilter === "completed" ? todoElem.completed :
-        completedFilter === "uncompleted" ? !todoElem.completed :
-        true;
-        return priorityMatch && completedMatch;;
-    });
-
     const completedTodos = todos.filter((todoElem) => {
         const completedMatch = 
-            completedFilter === "completed" ? todoElem.completed :
-            completedFilter === "uncompleted" ? !todoElem.completed :
+            completedFilter === true ? todoElem.completed :
+            completedFilter === false ? !todoElem.completed :
             true;
         return  completedMatch;
     });
 
+    const prioritizedTodos = todos.filter((todoElem) => {
+        const priorityMatch = 
+        !selectedPriority || todoElem.priority === selectedPriority;
+        const completedMatch = 
+        completedFilter === true ? todoElem.completed :
+        completedFilter === false ? !todoElem.completed :
+        true;
+        return priorityMatch && completedMatch;
+    });
     const handleSelectCompletedFilter = (filter) => {
-
-         // Verificamos si la prioridad ya está seleccionada o no
-         if (!activeFilter.includes(filter)) {
-
-            setActiveFilter((prevFilters) => [...prevFilters, filter]);
-
+        if (filter === true) {
+          setCompletedFilter(true);
+        } else if (filter === false) {
+          setCompletedFilter(false);
+        } else {
+          setCompletedFilter(null);
         }
-        setCompletedFilter(filter);  // filter puede ser "completed", "uncompleted" o null
-        setFilterIsVisible(false);  // Cerrar el menú si es necesario
-    };
+        setActiveFilter((prevFilters) => [...prevFilters, filter]);
+        setFilterIsVisible(false); // Cerrar el menú si es necesario
+        
+      };
+
+      React.useEffect(() => {
+        console.log("completedFilter", completedFilter);
+    }, [completedFilter]);
+  
 
     const handleSelectPriority = (priority) => {
 
@@ -143,7 +146,6 @@ function TodoProvider({ children }) {
         });
         savePersistedTodo(newTodos);
     }
-
     return (
         <TodoContext.Provider value={{
             loading,
@@ -155,12 +157,13 @@ function TodoProvider({ children }) {
             filterIsVisible,
             toggleFilters,
             activeFilter,
+            completedFilter,
             setActiveFilter,
             clearFilters,
             handleSelectPriority,
             handleSelectCompletedFilter,
             prioritizedTodos, //Filtrar por prioridad
-            completedTodos, //Filtrar por completitud
+            completedTodos, //Filtrar por estado de completo/incompleto
             completedTodosCount,
             totalTodosCount,
             searchTerm,
@@ -174,6 +177,7 @@ function TodoProvider({ children }) {
             
         }}>
             {children}
+           
         </TodoContext.Provider>
     );
 }

@@ -9,7 +9,7 @@ function TodosInitState() {
     <EmptyState 
       iconName="NoTask" 
       title="No hay Tareas" 
-      text="No tienes pendientes 💪. ¡Crea una tarea!" 
+      text="¡Crea una tarea!" 
     />
 
   );

@@ -7,11 +7,11 @@ import { TodosError } from '../EmptyStates/Error';
 import { TodosLoading } from '../EmptyStates/Loading';
 import { TodosInitState } from '../EmptyStates/InitState'; 
 import {TodosEmptySearch } from '../EmptyStates/EmptySearch';
+import {TodosEmptyFilter } from '../EmptyStates/EmptyFilter';
 import { Modal } from '../Modal/Modal';
 import { TodoForm } from '../TodoForm/TodoForm';
 import { TodoNav } from '../TodoNav/TodoNav';
 import { TodoContext } from '../TodoContext/TodoContext';
-import { TodoFilterButtons} from '../TodoFilterButtons/TodoFilterButtons';
 import { Footer } from '../Footer/Footer';
 import { Header } from '../Header/Header';
 
@@ -20,6 +20,7 @@ import { Header } from '../Header/Header';
         function AppUI() {
 
             const {
+                todos,
                 loading,
                 error,
                 searchTerm,
@@ -27,9 +28,9 @@ import { Header } from '../Header/Header';
                 selectedPriority,
                 prioritizedTodos,
                 completedTodos,
+                completedFilter,
                 onCompleteTodoAction,
                 onDeleteTodoAction,
-                handleSelectCompletedFilter,
                 openModal,
             } = React.useContext(TodoContext);
 
@@ -40,8 +41,10 @@ import { Header } from '../Header/Header';
                 todosToRender = prioritizedTodos;
             } else if (searchTerm) {
                 todosToRender = searchedTodos;
-            } else if(handleSelectCompletedFilter) {
+            } else if(completedTodos) {
                 todosToRender = completedTodos;
+            }else{
+                todosToRender = todos;
             }
           
                 
@@ -55,27 +58,42 @@ import { Header } from '../Header/Header';
 
                         <div className='flex flex-col md:flex-row justify-center md:justify-between my-4'>
                             <TodoCounter />
-                            <TodoFilterButtons />
-                            
                             
                         </div>
 
                         <TodoList>  
+
                             {loading && 
+
                                 <TodosLoading /> 
                             }
                             
                             {error && 
+
                                 <TodosError />
                             }
                             
                             {!loading && todosToRender.length === 0 ? (
                                 searchTerm ? (
+
                                     <TodosEmptySearch />
+
+                                ) : selectedPriority ?(
+
+                                    <TodosEmptyFilter />// or a custom message for priority filter
+
+                                ) : completedFilter ? (
+
+                                    <TodosEmptyFilter /> // or a custom message for completed filter
+
                                 ) : (
+
                                     <TodosInitState />
+
                                 )
+
                             ) : (
+                                
                                 todosToRender.map(todoElem => (
                                     <TodoItem 
                                         key={todoElem.text} 
