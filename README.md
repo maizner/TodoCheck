@@ -5,14 +5,18 @@
 T✅Do Bien es una aplicación de lista de tareas diseñada para ayudarte a organizar tus tareas diarias de manera eficiente. Este proyecto está enfocado en proporcionar una interfaz intuitiva y funcional para gestionar tus pendientes, con características clave que incluyen:
 
 - **Gestión de Prioridades:** Asigna prioridades a tus tareas y visualízalas claramente.
-- **Filtros Avanzados y Búsqueda:** Filtra y busca tus tareas por prioridad y fechas.
+- **Filtros Avanzados y Búsqueda:** Filtra y busca tus tareas por prioridad y estado de completitud.
+- **Funcionalidad de Edición:** Edita tus tareas, incluyendo su texto y prioridad, directamente desde la aplicación.
 - **Interfaz Amigable:** Disfruta de una experiencia de usuario fluida con un diseño moderno y funcional.
 
 ## Características
 
 - **Orden de Prioridades:** Clasifica tus tareas en diferentes niveles de importancia.
-- **Fecha de Inicio y Fin:** Establece fechas de vencimiento para una mejor planificación.
+- **Filtro de completas e incompletas:** Combina los filtros junto con las prioridades para encontrar fácilmente tus tareas.
+- **Buscador por palabra:** Busca tareas de manera rápida utilizando palabras clave.
+- **Funcionalidad de Edición:** Permite modificar el contenido y la prioridad de las tareas existentes.
 - **Interfaz Responsiva:** Optimizada para funcionar en dispositivos móviles y de escritorio.
+
 
 ## Tecnologías Utilizadas
 
