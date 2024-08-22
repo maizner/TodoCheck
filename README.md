@@ -1,6 +1,5 @@
 # T✅Do Bien
 ![Cover Image](cover-mvp.png)
-¡Hola, Bienvenidos a T✅Do Bien!
 
 T✅Do Bien es una aplicación de lista de tareas diseñada para ayudarte a organizar tus tareas diarias de manera eficiente. Este proyecto está enfocado en proporcionar una interfaz intuitiva y funcional para gestionar tus pendientes, con características clave que incluyen:
 
@@ -71,7 +70,7 @@ Consulta la documentación de Create React App para más detalles.
 
 
 ## Contribuciones
-Si deseas contribuir a T✅Do Bien, siéntete libre de hacer un fork del repositorio, crear una nueva rama para tus cambios y enviar un pull request. ¡Apreciamos cualquier aporte que pueda mejorar la aplicación!
+Si deseas contribuir a T✅Do Bien, siéntete libre de hacer un fork del repositorio, crear una nueva rama para tus cambios y enviar un pull request. ¡Se aprecia cualquier aporte que pueda mejorar la aplicación!
 
 ## Contacto
 Para cualquier pregunta o sugerencia, puedes ponerte en contacto con el autor del proyecto en maiaaizner@gmail.com.
