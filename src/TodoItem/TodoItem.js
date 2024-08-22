@@ -2,6 +2,7 @@ import React from 'react';
 import { ReactComponent as IconFlag } from '../icon-fill-flag.svg';
 // import { ReactComponent as IconCalendar } from '../icon-calendar.svg';
 import { ReactComponent as IconDelete } from '../icon-delete.svg';
+import { ReactComponent as IconEdit } from '../icon-edit.svg';
 import { IoRadioButtonOff, IoCheckmarkCircle } from "react-icons/io5";
 import { TodoContext } from '../TodoContext/TodoContext';
 
@@ -56,13 +57,13 @@ function TodoItem(props) {
             </div>
 
             <div className='flex flex-row items-center '>
-                {/* <span className="group"
+                <span className="group"
                     onClick={(e) => {
                         e.stopPropagation(); 
-                        // props.onEdit();
+                        props.onEdit();
                     }}>
                     <IconEdit width="24" height="24"  className="mx-1 text-td-primary-1 group-hover:text-td-primary-0" />
-                </span> */}
+                </span>
 
                 <span className="group"
                     onClick={(e) => {

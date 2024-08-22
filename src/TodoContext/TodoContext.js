@@ -28,6 +28,8 @@ function TodoProvider({ children }) {
     const [filterIsVisible, setFilterIsVisible] = React.useState(false);
     const [activeFilter, setActiveFilter] = React.useState([]);
     const [completedFilter, setCompletedFilter] = React.useState(null);
+    const [editingTodo, setEditingTodo] = React.useState(null);
+
 
     
 
@@ -72,6 +74,7 @@ function TodoProvider({ children }) {
     const prioritizedTodos = todos.filter((todoElem) => {
         const priorityMatch = 
         !selectedPriority || todoElem.priority === selectedPriority;
+
         const completedMatch = 
         completedFilter === true ? todoElem.completed :
         completedFilter === false ? !todoElem.completed :
@@ -146,6 +149,22 @@ function TodoProvider({ children }) {
         });
         savePersistedTodo(newTodos);
     }
+
+    const onUpdateTodoAction = (oldText, newText, priority) => {
+        
+        if (!priorities[priority]) {
+            console.error('Prioridad inválida:', priority);
+            return;
+        }
+       
+        const updatedTodos = todos.map(todo => 
+            todo.text === oldText 
+                ? { ...todo, text: newText, priority: priority } 
+                : todo
+        );
+        savePersistedTodo(updatedTodos);
+    };
+
     return (
         <TodoContext.Provider value={{
             loading,
@@ -169,9 +188,12 @@ function TodoProvider({ children }) {
             searchTerm,
             setSearchTerm,
             searchedTodos,
+            editingTodo,
+            setEditingTodo,
             onCompleteTodoAction,
             onDeleteTodoAction,
             onCreateTodoAction,
+            onUpdateTodoAction,
             openModal,
             setOpenModal,
             

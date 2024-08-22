@@ -25,12 +25,18 @@ import { Header } from '../Header/Header';
                 error,
                 searchTerm,
                 searchedTodos,
+                priorities,
                 selectedPriority,
+                setSelectedPriority,
                 prioritizedTodos,
                 completedTodos,
                 completedFilter,
+                onUpdateTodoAction, // Agregado para editar tarea
                 onCompleteTodoAction,
                 onDeleteTodoAction,
+                editingTodo, // Agregado para obtener la tarea en edición
+                setEditingTodo,
+                setOpenModal,
                 openModal,
             } = React.useContext(TodoContext);
 
@@ -46,7 +52,11 @@ import { Header } from '../Header/Header';
             }else{
                 todosToRender = todos;
             }
-          
+            
+            const handleEditClick = (todo) => {
+                setEditingTodo(todo);
+                setOpenModal(true);
+            };
                 
             return (
                 <>
@@ -102,6 +112,8 @@ import { Header } from '../Header/Header';
                                         priority={todoElem.priority} 
                                         onComplete={() => onCompleteTodoAction(todoElem.text)}
                                         onDelete={() => onDeleteTodoAction(todoElem.text)}
+                                        onEdit={() => handleEditClick(todoElem)} // Add onEdit handler
+
                                     />
                                 ))
                             )}
