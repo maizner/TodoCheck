@@ -1,4 +1,3 @@
-# T✅Do Bien
 ![Cover Image](cover-mvp.png)
 
 T✅Do Bien es una aplicación de lista de tareas diseñada para ayudarte a organizar tus tareas diarias de manera eficiente. Este proyecto está enfocado en proporcionar una interfaz intuitiva y funcional para gestionar tus pendientes, con características clave que incluyen:
