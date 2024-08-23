@@ -5,7 +5,7 @@ import { TodoFilterButtons} from '../TodoFilterButtons/TodoFilterButtons';
 function TodoList(props){
     return (
         <div >
-            <div className='flex flex-row items-end justify-between'>
+            <div className='hidden md:flex flex-col md:flex-row items-end justify-between w-full  '>
                 <h2 className='font-raleway font-normal text-[20px]'>Tareas</h2>
                 <TodoFilterButtons />
             </div>

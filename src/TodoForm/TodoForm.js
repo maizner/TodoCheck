@@ -96,7 +96,9 @@ function TodoForm() {
                         })}
                     </div>
                 </div>
-                <div className="w-full flex flex-col items-start gap-1">
+
+                 {/* TODO fecha :Datepicker */}
+                {/* <div className="w-full flex flex-col items-start gap-1">
                     <label className="text-md font-normal text-white">Tiempo</label>
                     <div className="flex flex-row justify-between bg-td-secondary-2 w-full rounded-md relative h-[43px]">
                         <IconCalendar className="flex p-2 mt-1 mb-1 text-gray-200 absolute top-0 left-0 bottom-0 z-10 w-9 h-9" />
@@ -106,7 +108,9 @@ function TodoForm() {
                             placeholder="4 Octubre 2024 ~ 5 Octubre 2024"
                         />
                     </div>
-                </div>
+                </div> */}
+
+                {/* TODO fecha :Datepicker */}
                 <div className="flex flex-row gap-3 w-full">
                     <button
                         type="button"

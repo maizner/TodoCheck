@@ -32,8 +32,8 @@ function TodoFilterButtons() {
     const uniquePriorities = [...new Set(todos?.map((todo) => todo.priority))];
 
     return (
-        <div className="relative">
-            <div className="flex flex-row gap-1 my-4 md:my-0">
+        <div className="relative w-full md:w-fit">
+            <div className="flex flex-row justify-between md:justify-normal gap-1 my-4 md:my-0 w-full ">
                
                 <button 
                     onClick={() => handleSelectCompletedFilter(true)}
