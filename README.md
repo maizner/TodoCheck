@@ -1,81 +1,83 @@
 ![Cover Image](cover-mvp.png)
 
-T✅Do Bien es una aplicación de lista de tareas diseñada para ayudarte a organizar tus tareas diarias de manera eficiente. Este proyecto está enfocado en proporcionar una interfaz intuitiva y funcional para gestionar tus pendientes, con características clave que incluyen:
+T✅Do Bien is a task list application designed to help you efficiently organize your daily tasks. This project focuses on providing an intuitive and functional interface for managing your to-dos, with key features including:
 
-- **Gestión de Prioridades:** Asigna prioridades a tus tareas y visualízalas claramente.
-- **Filtros Avanzados y Búsqueda:** Filtra y busca tus tareas por prioridad y estado de completitud.
-- **Funcionalidad de Edición:** Edita tus tareas, incluyendo su texto y prioridad, directamente desde la aplicación.
-- **Interfaz Amigable:** Disfruta de una experiencia de usuario fluida con un diseño moderno y funcional.
+- **Priority Management:** Assign priorities to your tasks and view them clearly.
+- **Advanced Filters and Search:** Filter and search your tasks by priority and completion status.
+- **Editing Functionality:** Edit your tasks, including their text and priority, directly from the app.
+- **User-Friendly Interface:** Enjoy a smooth user experience with a modern and functional design.
 
-## Características
+## Features
 
-- **Orden de Prioridades:** Clasifica tus tareas en diferentes niveles de importancia.
-- **Filtro de completas e incompletas:** Combina los filtros junto con las prioridades para encontrar fácilmente tus tareas.
-- **Buscador por palabra:** Busca tareas de manera rápida utilizando palabras clave.
-- **Funcionalidad de Edición:** Permite modificar el contenido y la prioridad de las tareas existentes.
-- **Interfaz Responsiva:** Optimizada para funcionar en dispositivos móviles y de escritorio.
+- **Priority Order:** Classify your tasks into different levels of importance.
+- **Complete and Incomplete Filter:** Combine filters with priorities to easily find your tasks.
+- **Keyword Search:** Quickly search tasks using keywords.
+- **Editing Functionality:** Modify the content and priority of existing tasks.
+- **Responsive Interface:** Optimized to work on mobile and desktop devices.
 
+## Technologies Used
 
-## Tecnologías Utilizadas
+- **React:** For a dynamic and responsive user experience.
+- **Tailwind CSS:** For a modern and flexible design.
+- **LocalStorage:** For data persistence across sessions.
 
-- **React:** Para una experiencia de usuario dinámica y reactiva.
-- **Tailwind CSS:** Para un diseño moderno y flexible.
-- **LocalStorage:** Para la persistencia de datos a través de sesiones.
+## Installation
 
-## Instalación
+To get started with T✅Do Bien, follow these steps:
 
-Para comenzar con T✅Do Bien, sigue estos pasos:
-
-1. **Clona el Repositorio:**
+1. **Clone the Repository:**
    ```bash
    git clone https://github.com/maizner/TodoCheck.git
 
-2. **Navega al Directorio del Proyecto:**
+2. **Navigate to the Project Directory:**
    ```bash
    cd TodoCheck
 
 
-3. **Instala las Dependencias:**
+3. **Install Dependencies:**
    ```bash
    npm install
 
 
-4. **Inicia la Aplicación:**
+4. **Start the Application:**
    ```bash
    npm start
 
-## Enlace al Diseño en Figma
+## Figma Design Link
 
-Puedes acceder al diseño del proyecto en Figma a través del siguiente enlace:
-
-[Diseño en Figma - Todo Bien](https://www.figma.com/design/GkZBg5chDOoR96RGzemphL/ToDo-Bien?node-id=574-15&t=yMzDLxrxI5sUXayC-1)
+You can access the project design on Figma through the following link:
 
 
+[Design on Figma - Todo Bien](https://www.figma.com/design/GkZBg5chDOoR96RGzemphL/ToDo-Bien?node-id=574-15&t=yMzDLxrxI5sUXayC-1)
 
-## Créditos y Reconocimientos
-Este proyecto fue desarrollado a partir del curso <a href="https://platzi.com/home/clases/7395-react/62326-que-necesitas-para-aprender-reactjs/"> ¿Qué necesitas para aprender React.js?</a> de Platzi. Damos crédito y agradecimiento a Platzi y a su instructor por proporcionar la base de este proyecto.
 
-El proyecto original fue basado en un repositorio público de Platzi, modificado y expandido para incluir nuevas funcionalidades y mejoras de usabilidad.
 
-## Documentación del Proyecto Inicial
-Este proyecto fue creado con Create React App.
+## Credits and Acknowledgments
+his project was developed based on the course <a href="https://platzi.com/home/clases/7395-react/62326-que-necesitas-para-aprender-reactjs/"> ¿Qué necesitas para aprender React.js?</a> rom Platzi. We give credit and thanks to Platzi and its instructor for providing the foundation of this project.
 
-- **Puedes ejecutar los siguientes scripts en el directorio del proyecto:**
+The original project was based on a public Platzi repository, modified and expanded to include new features and usability improvements.
+
+
+## Initial Project Documentation
+This project was created with Create React App.
+
+- **You can run the following scripts in the project directory:**
    ```bash
    npm start
    npm run build
    npm run eject
-npm start: Ejecuta la aplicación en modo de desarrollo.
-npm run build: Construye la aplicación para producción en la carpeta build.
-npm run eject: Copia todas las configuraciones para que puedas personalizarlas.
-Consulta la documentación de [Create React App](https://create-react-app.dev/)  para más detalles.
+npm start: Runs the application in development mode.
+npm run build: Builds the application for production in the build folder.
+npm run eject: Copies all configuration files so you can customize them.
+
+Check the [Create React App documentation](https://create-react-app.dev/) for more details.
 
 
-## Contribuciones
-Si deseas contribuir a T✅Do Bien, siéntete libre de hacer un fork del repositorio, crear una nueva rama para tus cambios y enviar un pull request. ¡Se aprecia cualquier aporte que pueda mejorar la aplicación!
+## Contributions
+If you would like to contribute to T✅Do Bien, feel free to fork the repository, create a new branch for your changes, and submit a pull request. Any contributions to improve the application are appreciated!
 
-## Contacto
-Para cualquier pregunta o sugerencia, puedes ponerte en contacto con el autor del proyecto en maiaaizner@gmail.com.
+## Contact
+For any questions or suggestions, you can contact the project author at maiaaizner@gmail.com.
 
 
 
