@@ -1,5 +1,6 @@
 import React from 'react';
-import { ReactComponent as IconCalendar } from '../icon-calendar.svg';
+// TODO fecha :Datepicker
+// import { ReactComponent as IconCalendar } from '../icon-calendar.svg';
 import { ReactComponent as IconFlag } from '../icon-fill-flag.svg';
 import { TodoContext } from '../TodoContext/TodoContext';
 
@@ -12,10 +13,10 @@ function TodoForm() {
         priorities, 
         editingTodo,
     } = React.useContext(TodoContext);
-    const [newTodoValue, setNewTodoValue] = React.useState(editingTodo ? editingTodo.text : '');
     const [editedTodoText, setEditedTodoText] = React.useState(editingTodo ? editingTodo.text : '');
     const [priority, setPriority] = React.useState(editingTodo ? editingTodo.priority : 'baja');
     const [error, setError] = React.useState(false); // Estado para el manejo del error
+
 
 
     const onSubmit = (e) => {
@@ -29,22 +30,18 @@ function TodoForm() {
       
         if (editingTodo) {
           onUpdateTodoAction(editingTodo.text, editedTodoText, priority);
-          setEditingTodo({ ...editingTodo, text: editedTodoText, priority: priority }); // Actualiza el estado editingTodo
-          console.log('Todo updated successfully!');
+        setEditingTodo(null); // Actualizar el estado editingTodo en el componente TodoForm
+
         } else {
           onCreateTodoAction(editedTodoText, priority);
         }
-      
+
         setOpenModal(false);
     };
     
 
     const onCancel = () => {
         setOpenModal(false);
-    };
-
-    const onChange = (e) => {
-        setNewTodoValue(e.target.value);
     };
 
     return (
@@ -110,7 +107,7 @@ function TodoForm() {
                     </div>
                 </div> */}
 
-                {/* TODO fecha :Datepicker */}
+                {/* botones */}
                 <div className="flex flex-row gap-3 w-full">
                     <button
                         type="button"

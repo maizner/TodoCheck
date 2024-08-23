@@ -25,16 +25,12 @@ import { Header } from '../Header/Header';
                 error,
                 searchTerm,
                 searchedTodos,
-                priorities,
                 selectedPriority,
-                setSelectedPriority,
                 prioritizedTodos,
                 completedTodos,
                 completedFilter,
-                onUpdateTodoAction, // Agregado para editar tarea
                 onCompleteTodoAction,
                 onDeleteTodoAction,
-                editingTodo, // Agregado para obtener la tarea en edición
                 setEditingTodo,
                 setOpenModal,
                 openModal,
@@ -61,7 +57,7 @@ import { Header } from '../Header/Header';
             return (
                 <>
                 < Header />
-                    <div className='flex flex-col content-center justify-center max-w-[580px] w-full px-8 py-10 bg-td-secondary-1 rounded-lg shadow-lg shadow-td-secondary-darken/10 '>
+                    <div className='flex flex-col content-center justify-center max-w-[580px] w-full px-3 py-3 md:px-8 md:py-10 bg-td-secondary-1 rounded-lg shadow-lg shadow-td-secondary-darken/10 '>
 
 
                         <TodoNav />

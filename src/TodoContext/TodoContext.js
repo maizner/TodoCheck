@@ -163,6 +163,7 @@ function TodoProvider({ children }) {
                 : todo
         );
         savePersistedTodo(updatedTodos);
+        setEditingTodo(null)
     };
 
     return (
