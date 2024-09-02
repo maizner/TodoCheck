@@ -29,8 +29,8 @@ function TodoForm() {
         setError(false);
       
         if (editingTodo) {
-          onUpdateTodoAction(editingTodo.text, editedTodoText, priority);
-        setEditingTodo(null); // Actualizar el estado editingTodo en el componente TodoForm
+            onUpdateTodoAction(editingTodo.text, editedTodoText, priority);
+            setEditingTodo(null);
 
         } else {
           onCreateTodoAction(editedTodoText, priority);
@@ -41,6 +41,10 @@ function TodoForm() {
     
 
     const onCancel = () => {
+        if (editingTodo) {
+              setEditingTodo(null);
+  
+       }
         setOpenModal(false);
     };
 
