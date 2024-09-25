@@ -43,9 +43,6 @@ function useLocalStorage(itemName, initialValue){
     }, []);
 
     
-
-    
-
     //funcion para persistir los cambios. Esta se la pasaremos a accion de completar y borrar todos
     const savePersistedItem = (newItem) => {
         localStorage.setItem(
