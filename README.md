@@ -82,4 +82,6 @@ If you would like to contribute to T✅Do Bien, feel free to fork the repository
 For any questions or suggestions, you can contact the project author at maiaaizner@gmail.com.
 
 
-
+<p align="center">
+  <img src="src/Components/Navbar/logo-brand.svg" alt="Logo" width="200" />
+</p>
