@@ -1,5 +1,5 @@
 import React from 'react';
-import { EmptyState } from './EmptyState';
+import { EmptyStateIllus } from './EmptyStateIllus';
 
 
 
@@ -7,7 +7,7 @@ import { EmptyState } from './EmptyState';
 function TodosEmptySearch() {
   return (
 
-    < EmptyState 
+    < EmptyStateIllus 
     iconName="NoSearch" 
     title="No hay resultados" 
     text="Prueba buscando algo diferente." 

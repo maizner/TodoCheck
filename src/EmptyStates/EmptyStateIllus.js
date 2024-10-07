@@ -11,7 +11,7 @@ const icons = {
   Error: IllustrationError,
 };
 
-function EmptyState({ iconName, title, text }) {
+function EmptyStateIllus({ iconName, title, text }) {
   const IconComponent = icons[iconName];
 
   return (
@@ -29,4 +29,4 @@ function EmptyState({ iconName, title, text }) {
   );
 }
 
-export { EmptyState };
+export { EmptyStateIllus };

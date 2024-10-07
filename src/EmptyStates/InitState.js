@@ -1,12 +1,12 @@
 import React from 'react';
-import { EmptyState } from './EmptyState';
+import { EmptyStateIllus } from './EmptyStateIllus';
 
 
 
 
 function TodosInitState() {
   return (
-    <EmptyState 
+    <EmptyStateIllus 
       iconName="NoTask" 
       title="No hay Tareas" 
       text="¡Crea una tarea!" 
