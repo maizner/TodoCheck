@@ -1,27 +1,28 @@
 {
   "files": {
-    "main.css": "/TodoCheck/static/css/main.1c378efb.css",
-    "main.js": "/TodoCheck/static/js/main.d8dd8a2f.js",
+    "main.css": "/TodoCheck/static/css/main.a95ab0c6.css",
+    "main.js": "/TodoCheck/static/js/main.8c8f914a.js",
+    "static/media/congratulations.gif": "/TodoCheck/static/media/congratulations.902adc6c3f0cbe5d16da.gif",
     "static/media/avatar@3x.png": "/TodoCheck/static/media/avatar@3x.8d19f2b70b9a609785a0.png",
     "static/media/avatar@2x.png": "/TodoCheck/static/media/avatar@2x.9fb9e8d8f86f85cd711a.png",
-    "static/media/signature.svg": "/TodoCheck/static/media/signature.63896137d0b1c86a49fa0053cd052069.svg",
-    "static/media/logo.svg": "/TodoCheck/static/media/logo.9ecfb46420afe32728281a81226019e9.svg",
-    "static/media/EmptyState-NoFilter.svg": "/TodoCheck/static/media/EmptyState-NoFilter.077ade9edb2b88f9a68c98869e95b54e.svg",
-    "static/media/EmptyState-NoSearch.svg": "/TodoCheck/static/media/EmptyState-NoSearch.c44049447ad80c1732805eea75cc60dd.svg",
-    "static/media/EmptyState-NoTask.svg": "/TodoCheck/static/media/EmptyState-NoTask.15628718e17fb61d0c007aa1c8730497.svg",
-    "static/media/EmptyState-Error.svg": "/TodoCheck/static/media/EmptyState-Error.85b010530f91d75bd013988ca4823d5d.svg",
-    "static/media/icon-fill-flag.svg": "/TodoCheck/static/media/icon-fill-flag.4d7c79d6773be5778159c67b87162da1.svg",
+    "static/media/signature.svg": "/TodoCheck/static/media/signature.cfea7a1db960eda048553586b2fdb4e4.svg",
+    "static/media/logo.svg": "/TodoCheck/static/media/logo.8b9a9a4a8b01273d48fbe8fb0dfd9d71.svg",
+    "static/media/EmptyState-NoFilter.svg": "/TodoCheck/static/media/EmptyState-NoFilter.08575104138f46d37a1bb7e439c9981f.svg",
+    "static/media/EmptyState-NoSearch.svg": "/TodoCheck/static/media/EmptyState-NoSearch.409b4dd131f43b85c9cad97fe408736b.svg",
+    "static/media/EmptyState-NoTask.svg": "/TodoCheck/static/media/EmptyState-NoTask.044b1050327f767b70682e0a94fd822c.svg",
+    "static/media/EmptyState-Error.svg": "/TodoCheck/static/media/EmptyState-Error.e78a270b4a23f62dae3be7e95df9833f.svg",
+    "static/media/icon-fill-flag.svg": "/TodoCheck/static/media/icon-fill-flag.90167d14fa07b54d2a7716b075e311f0.svg",
     "index.html": "/TodoCheck/index.html",
-    "static/media/icon-remove-filters.svg": "/TodoCheck/static/media/icon-remove-filters.9b7948b67e395c19735d8b5e1f9adf5c.svg",
-    "static/media/icon-linear-flag.svg": "/TodoCheck/static/media/icon-linear-flag.6532afbc9175b31598a4e5204e355106.svg",
-    "static/media/icon-delete.svg": "/TodoCheck/static/media/icon-delete.ca2cde85f870b5ff26071e3b0dc4ec84.svg",
-    "static/media/icon-edit.svg": "/TodoCheck/static/media/icon-edit.c57b3814506446c87b25ddf04a226776.svg",
-    "static/media/icon-plus.svg": "/TodoCheck/static/media/icon-plus.75bfd416836f8b322b498b400845943a.svg",
-    "main.1c378efb.css.map": "/TodoCheck/static/css/main.1c378efb.css.map",
-    "main.d8dd8a2f.js.map": "/TodoCheck/static/js/main.d8dd8a2f.js.map"
+    "static/media/icon-remove-filters.svg": "/TodoCheck/static/media/icon-remove-filters.ba022815646dfb35f861a907555b8dc8.svg",
+    "static/media/icon-linear-flag.svg": "/TodoCheck/static/media/icon-linear-flag.aa4697ba86871efe060d0761540da493.svg",
+    "static/media/icon-delete.svg": "/TodoCheck/static/media/icon-delete.eb2829e02adbcb34e259f8d1629346ce.svg",
+    "static/media/icon-edit.svg": "/TodoCheck/static/media/icon-edit.336e740eb40ea73bc9cf9558dd3461ee.svg",
+    "static/media/icon-plus.svg": "/TodoCheck/static/media/icon-plus.95f3017dc8c027f56ac80b5af47ff64a.svg",
+    "main.a95ab0c6.css.map": "/TodoCheck/static/css/main.a95ab0c6.css.map",
+    "main.8c8f914a.js.map": "/TodoCheck/static/js/main.8c8f914a.js.map"
   },
   "entrypoints": [
-    "static/css/main.1c378efb.css",
-    "static/js/main.d8dd8a2f.js"
+    "static/css/main.a95ab0c6.css",
+    "static/js/main.8c8f914a.js"
   ]
 }
