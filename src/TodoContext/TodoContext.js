@@ -3,7 +3,6 @@ import { useLocalStorage } from './useLocalStorage';
 
 const TodoContext = React.createContext();
 
-
 function TodoProvider({ children }) {
     
 
@@ -13,7 +12,6 @@ function TodoProvider({ children }) {
         alta: { name: 'Alta', color: 'yellow-500' },
         urgente: { name: 'Urgente', color: 'red-500' },
     });
-
 
     const {
         item: todos,
@@ -30,10 +28,6 @@ function TodoProvider({ children }) {
     const [completedFilter, setCompletedFilter] = React.useState(null);
     const [editingTodo, setEditingTodo] = React.useState(null);
 
-
-    
-
-    
     const toggleFilters = () => {
         setFilterIsVisible((prevState) => !prevState);
 
@@ -46,8 +40,6 @@ function TodoProvider({ children }) {
         setFilterIsVisible(false);  // Cerrar el listado
         console.log('Filtros limpiados');
     }
-
-  
 
     const completedTodosCount = todos.filter(
         todoElem => !!todoElem.completed
@@ -182,8 +174,8 @@ function TodoProvider({ children }) {
             clearFilters,
             handleSelectPriority,
             handleSelectCompletedFilter,
-            prioritizedTodos, //Filtrar por prioridad
-            completedTodos, //Filtrar por estado de completo/incompleto
+            prioritizedTodos, 
+            completedTodos,
             completedTodosCount,
             totalTodosCount,
             searchTerm,

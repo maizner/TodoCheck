@@ -8,9 +8,9 @@ function TodosEmptyFilter() {
   return (
 
     < EmptyStateIllus 
-    iconName="NoFilter" 
-    title="No hay resultados" 
-    text="No hay filtros que coincidan con tu búsqueda" 
+      iconName='NoFilter' 
+      title='No hay resultados' 
+      text='No hay filtros que coincidan con tu búsqueda' 
   />
    );
 }

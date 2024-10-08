@@ -1,7 +1,7 @@
-<svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M5.29492 1.20923V3.7702" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M12.168 1.20923V3.7702" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M4.43652 10.5996H11.309" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M4.43652 14.0139H8.73185" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M12.1679 2.4895C15.0285 2.64316 16.4632 3.72731 16.4632 7.7395V13.0151C16.4632 16.5322 15.6041 18.2907 11.3088 18.2907H6.15439C1.85907 18.2907 1 16.5322 1 13.0151V7.7395C1 3.72731 2.43464 2.6517 5.29533 2.4895H12.1679Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<svg width='18' height='20' viewBox='0 0 18 20' fill='none' xmlns='http://www.w3.org/2000/svg'>
+<path d='M5.29492 1.20923V3.7702' stroke='currentColor' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/>
+<path d='M12.168 1.20923V3.7702' stroke='currentColor' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/>
+<path d='M4.43652 10.5996H11.309' stroke='currentColor' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/>
+<path d='M4.43652 14.0139H8.73185' stroke='currentColor' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/>
+<path d='M12.1679 2.4895C15.0285 2.64316 16.4632 3.72731 16.4632 7.7395V13.0151C16.4632 16.5322 15.6041 18.2907 11.3088 18.2907H6.15439C1.85907 18.2907 1 16.5322 1 13.0151V7.7395C1 3.72731 2.43464 2.6517 5.29533 2.4895H12.1679Z' stroke='currentColor' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/>
 </svg>

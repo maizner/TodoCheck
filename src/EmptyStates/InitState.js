@@ -7,9 +7,9 @@ import { EmptyStateIllus } from './EmptyStateIllus';
 function TodosInitState() {
   return (
     <EmptyStateIllus 
-      iconName="NoTask" 
-      title="No hay Tareas" 
-      text="¡Crea una tarea!" 
+      iconName='NoTask' 
+      title='No hay Tareas' 
+      text='¡Crea una tarea!' 
     />
 
   );

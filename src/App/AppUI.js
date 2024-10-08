@@ -24,6 +24,7 @@ function AppUI() {
         selectedPriority,
         prioritizedTodos,
         completedTodos,
+        totalTodosCount,
         onCompleteTodoAction,
         onDeleteTodoAction,
         setEditingTodo,
@@ -31,8 +32,7 @@ function AppUI() {
         openModal,
     } = React.useContext(TodoContext);
 
-        // Determine which list to render based on the presence of
-        //  `selectedPriority` or `searchTerm` or `completed`
+    // Determine which list to render based on filters applied
     let todosToRender;
     if (selectedPriority) {
         todosToRender = prioritizedTodos;
@@ -59,6 +59,7 @@ function AppUI() {
                     error = {error}
                     loading = {loading}
                     todosToRender = {todosToRender}
+                    totalTodosCount = {totalTodosCount}
                     onError = { () => <TodosError />}
                     onLoading = { () => <TodosLoading />}
                     onEmpty = { () => <TodosEmpty />}

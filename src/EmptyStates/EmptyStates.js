@@ -1,8 +1,8 @@
 import React from 'react';
 import { TodoContext } from '../TodoContext/TodoContext';
 import { TodosInitState } from '../EmptyStates/InitState'; 
-import {TodosEmptySearch } from '../EmptyStates/EmptySearch';
-import {TodosEmptyFilter } from '../EmptyStates/EmptyFilter';
+import { TodosEmptySearch } from '../EmptyStates/EmptySearch';
+import { TodosEmptyFilter } from '../EmptyStates/EmptyFilter';
 
 
 function TodosEmpty() {
@@ -14,10 +14,11 @@ function TodosEmpty() {
     } = React.useContext(TodoContext);
 
     const isSearchEmpty = searchTerm;
-    const isFilterEmpty = selectedPriority || completedFilter
+    const isFilterEmpty = selectedPriority || completedFilter;
     
   return (
-    isSearchEmpty ? <TodosEmptySearch /> :
+    isSearchEmpty ? 
+    <TodosEmptySearch searchText = {searchTerm} /> :
     isFilterEmpty ? <TodosEmptyFilter /> :
     <TodosInitState />
   );
