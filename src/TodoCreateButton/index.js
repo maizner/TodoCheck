@@ -1,11 +1,8 @@
 import React from 'react'; 
 import { ReactComponent as IconPlus } from './icon-plus.svg';
-import { TodoContext } from '../TodoContext';
 
-function TodoCreateButton(){
-  const {
-    setOpenModal,
-} = React.useContext(TodoContext);
+function TodoCreateButton({setOpenModal}){
+
 
     return (
       <button 

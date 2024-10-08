@@ -28,12 +28,17 @@ function AppUI() {
         selectedPriority,
         prioritizedTodos,
         completedTodos,
+        completedTodosCount,
+        onCreateTodoAction,
         totalTodosCount,
+        onUpdateTodoAction,
         handleComplete,
         handleDelete,
+        editingTodo,
         setEditingTodo,
         setOpenModal,
         openModal,
+        priorities
     } = React.useContext(TodoContext);
 
     // Determine which list to render based on filters applied
@@ -58,7 +63,10 @@ function AppUI() {
             < Header />
             <div className='flex flex-col content-center justify-center max-w-[580px] w-full px-3 py-3 md:px-8 md:py-10 bg-td-secondary-1 rounded-lg shadow-lg shadow-td-secondary-darken/10 '>
                 <div className='flex flex-col items-center justify-center w-full h-full md:flex-row md:justify-between'>
-                    <Avatar />
+                    <Avatar 
+                        completedTodosCount = {completedTodosCount}
+                        totalTodosCount = {totalTodosCount}
+                    />
                     <TodoSearch 
                         searchTerm={searchTerm}
                         setSearchTerm={setSearchTerm}
@@ -92,10 +100,17 @@ function AppUI() {
                     />
                 )}
                 />
-                <TodoCreateButton />
+                <TodoCreateButton setOpenModal = {setOpenModal}/>
                 {openModal &&(
                     <Modal>
-                        <TodoForm />
+                        <TodoForm
+                         onCreateTodoAction={onCreateTodoAction} 
+                         onUpdateTodoAction={onUpdateTodoAction} 
+                         setOpenModal = {setOpenModal}  
+                         setEditingTodo = {setEditingTodo} 
+                         priorities = {priorities}  
+                         editingTodo = {editingTodo} 
+                         />
                     </Modal>
                 )}
             </div>

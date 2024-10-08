@@ -3,16 +3,8 @@ import avatar1x from './avatar@1x.png';
 import avatar2x from './avatar@2x.png';
 import avatar3x from './avatar@3x.png';
 import congratulations from './congratulations.gif';
-import { TodoContext } from "../TodoContext";
 
-
-function Avatar (){
-
-    const {
-        completedTodosCount,
-        totalTodosCount,
-
-    }= React.useContext(TodoContext);
+function Avatar ({completedTodosCount,totalTodosCount}){
  
     return (
 
