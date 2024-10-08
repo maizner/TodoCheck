@@ -1,12 +1,12 @@
 import React from 'react'; 
-import { TodoContext } from '../TodoContext';
+// import { TodoContext } from '../TodoContext';
 
-function TodoCounter(){
-    const {
-        completedTodosCount,
-        totalTodosCount,
+function TodoCounter({totalTodosCount, completedTodosCount}){
+    // const {
+    //     completedTodosCount,
+    //     totalTodosCount,
 
-    }= React.useContext(TodoContext);
+    // }= React.useContext(TodoContext);
     return (
         <>
             { totalTodosCount > 0 && 

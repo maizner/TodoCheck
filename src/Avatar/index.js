@@ -18,15 +18,12 @@ function Avatar (){
 
         <div className="relative mb-4">
             
-             {totalTodosCount === 0|| completedTodosCount === totalTodosCount ? 
+            {totalTodosCount === 0|| completedTodosCount === totalTodosCount ? 
                 <div className=" absolute top-[-10px] right-[-37px]">
                     <img src={congratulations} className="w-16 block" alt=""  />
                     
                 </div>
-                : 
-                // momentaneamente vacío
-                <div className="absolute top-[-10px] right-[-10px] hidden" ></div>
-            }
+                : null }
              
             <img 
                 src={avatar1x} 
