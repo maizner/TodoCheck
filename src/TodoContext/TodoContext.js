@@ -4,8 +4,6 @@ import { useLocalStorage } from './useLocalStorage';
 const TodoContext = React.createContext();
 
 function TodoProvider({ children }) {
-    
-
     const [priorities] = React.useState({
         baja: { name: 'Baja', color: 'gray-500' },
         normal: { name: 'Normal', color: 'blue-200' },
@@ -104,9 +102,7 @@ function TodoProvider({ children }) {
         console.log('Prioridad seleccionada:', priority);
     }
 
-
-
-    const onCompleteTodoAction = (text) => {
+    const handleComplete = (text) => {
         const newTodos = [...todos];
         const todoIndex = newTodos.findIndex(
             (todoElem) => todoElem.text === text
@@ -116,7 +112,7 @@ function TodoProvider({ children }) {
         savePersistedTodo(newTodos);
     }
 
-    const onDeleteTodoAction = (id) => {
+    const handleDelete = (id) => {
         const newTodos = [...todos];
         const todoIndex = newTodos.findIndex(
             (todoElem) => todoElem.id === id
@@ -183,8 +179,8 @@ function TodoProvider({ children }) {
             searchedTodos,
             editingTodo,
             setEditingTodo,
-            onCompleteTodoAction,
-            onDeleteTodoAction,
+            handleComplete,
+            handleDelete,
             onCreateTodoAction,
             onUpdateTodoAction,
             openModal,

@@ -12,6 +12,7 @@ import { TodoNav } from '../TodoNav/TodoNav';
 import { TodoContext } from '../TodoContext/TodoContext';
 import { Footer } from '../Footer/Footer';
 import { Header } from '../Header/Header';
+import { TodoFilters} from '../TodoFilters/TodoFilters';
 
 function AppUI() {
 
@@ -25,15 +26,15 @@ function AppUI() {
         prioritizedTodos,
         completedTodos,
         totalTodosCount,
-        onCompleteTodoAction,
-        onDeleteTodoAction,
+        handleComplete,
+        handleDelete,
         setEditingTodo,
         setOpenModal,
         openModal,
     } = React.useContext(TodoContext);
 
     // Determine which list to render based on filters applied
-    let todosToRender;
+    let todosToRender  = todos;
     if (selectedPriority) {
         todosToRender = prioritizedTodos;
     } else if (searchTerm) {
@@ -44,7 +45,7 @@ function AppUI() {
         todosToRender = todos;
     }
     
-    const handleEditClick = (todo) => {
+    const handleEdit = (todo) => {
         setEditingTodo(todo);
         setOpenModal(true);
     };
@@ -55,6 +56,7 @@ function AppUI() {
             <div className='flex flex-col content-center justify-center max-w-[580px] w-full px-3 py-3 md:px-8 md:py-10 bg-td-secondary-1 rounded-lg shadow-lg shadow-td-secondary-darken/10 '>
                 <TodoNav />
                 <TodoCounter />
+                <TodoFilters />
                 <TodoList 
                     error = {error}
                     loading = {loading}
@@ -69,9 +71,9 @@ function AppUI() {
                         text={todoElem.text} 
                         completed={todoElem.completed} 
                         priority={todoElem.priority} 
-                        onComplete={() => onCompleteTodoAction(todoElem.text)}
-                        onDelete={() => onDeleteTodoAction(todoElem.text)}
-                        onEdit={() => handleEditClick(todoElem)} 
+                        onComplete={() => handleComplete(todoElem.text)}
+                        onDelete={() => handleDelete(todoElem.text)}
+                        onEdit={() => handleEdit(todoElem)} 
                     />
                 )}
                 />
