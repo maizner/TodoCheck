@@ -116,10 +116,10 @@ function TodoProvider({ children }) {
         savePersistedTodo(newTodos);
     }
 
-    const onDeleteTodoAction = (text) => {
+    const onDeleteTodoAction = (id) => {
         const newTodos = [...todos];
         const todoIndex = newTodos.findIndex(
-            (todoElem) => todoElem.text === text
+            (todoElem) => todoElem.id === id
         );
         newTodos.splice(todoIndex, 1);
         savePersistedTodo(newTodos);

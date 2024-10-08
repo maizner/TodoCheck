@@ -16,7 +16,7 @@ function TodoList({error, loading, todosToRender,onError, onLoading, onEmpty, re
                 <h2 className='hidden md:flex font-raleway font-normal text-[20px]'>Tareas</h2>
                 <TodoFilterButtons />
             </div>
-            <ul className='TodoList min-h-[230px]'>
+            <ul className='TodoList min-h-[170px]'>
                 {todosToRender.map(render)}
                 
             </ul>
