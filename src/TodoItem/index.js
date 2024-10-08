@@ -1,10 +1,9 @@
 import React from 'react'; 
 import { ReactComponent as IconFlag } from '../icon-fill-flag.svg';
-// import { ReactComponent as IconCalendar } from '../icon-calendar.svg';
 import { ReactComponent as IconDelete } from '../icon-delete.svg';
 import { ReactComponent as IconEdit } from '../icon-edit.svg';
 import { IoRadioButtonOff, IoCheckmarkCircle } from "react-icons/io5";
-import { TodoContext } from '../TodoContext/TodoContext';
+import { TodoContext } from '../TodoContext';
 
 function TodoItem(props) {
 

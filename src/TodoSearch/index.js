@@ -1,6 +1,6 @@
 import React from 'react';
 import { IoSearchOutline } from 'react-icons/io5';
-import { TodoContext } from '../TodoContext/TodoContext';
+import { TodoContext } from '../TodoContext';
 
 function TodoSearch() {
   const {

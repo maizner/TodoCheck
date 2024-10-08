@@ -2,7 +2,7 @@ import React from 'react';
 // TODO fecha :Datepicker
 // import { ReactComponent as IconCalendar } from '../icon-calendar.svg';
 import { ReactComponent as IconFlag } from '../icon-fill-flag.svg';
-import { TodoContext } from '../TodoContext/TodoContext';
+import { TodoContext } from '../TodoContext';
 
 function TodoForm() {
     const { 

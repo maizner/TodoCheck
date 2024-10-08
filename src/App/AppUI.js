@@ -1,18 +1,18 @@
 import React from 'react';
-import { TodoCounter } from '../TodoCounter/TodoCounter';
-import { TodoList } from '../TodoList/TodoList';
-import { TodoItem } from '../TodoItem/TodoItem';
-import { TodoCreateButton } from '../TodoCreateButton/TodoCreateButton';
+import { TodoCounter } from '../TodoCounter';
+import { TodoList } from '../TodoList';
+import { TodoItem } from '../TodoItem';
+import { TodoCreateButton } from '../TodoCreateButton';
 import { TodosError } from '../EmptyStates/Error';
 import { TodosLoading } from '../EmptyStates/Loading';
-import { TodosEmpty } from '../EmptyStates/EmptyStates';
-import { Modal } from '../Modal/Modal';
-import { TodoForm } from '../TodoForm/TodoForm';
-import { TodoNav } from '../TodoNav/TodoNav';
-import { TodoContext } from '../TodoContext/TodoContext';
-import { Footer } from '../Footer/Footer';
-import { Header } from '../Header/Header';
-import { TodoFilters} from '../TodoFilters/TodoFilters';
+import { TodosEmpty } from '../EmptyStates';
+import { Modal } from '../Modal';
+import { TodoForm } from '../TodoForm';
+import { TodoNav } from '../TodoNav';
+import { TodoContext } from '../TodoContext';
+import { Footer } from '../Footer';
+import { Header } from '../Header';
+import { TodoFilters} from '../TodoFilters';
 
 function AppUI() {
 
@@ -66,6 +66,7 @@ function AppUI() {
                     onLoading = { () => <TodosLoading />}
                     onEmpty = { () => <TodosEmpty />}
                     render = {todoElem => (
+
                     <TodoItem 
                         key={todoElem.text} 
                         text={todoElem.text} 

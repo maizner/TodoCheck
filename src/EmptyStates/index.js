@@ -1,8 +1,8 @@
 import React from 'react';
-import { TodoContext } from '../TodoContext/TodoContext';
-import { TodosInitState } from '../EmptyStates/InitState'; 
-import { TodosEmptySearch } from '../EmptyStates/EmptySearch';
-import { TodosEmptyFilter } from '../EmptyStates/EmptyFilter';
+import { TodoContext } from '../TodoContext';
+import { TodosInitState } from './InitState'; 
+import { TodosEmptySearch } from './EmptySearch';
+import { TodosEmptyFilter } from './EmptyFilter';
 
 
 function TodosEmpty() {

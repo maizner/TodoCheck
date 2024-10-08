@@ -1,6 +1,6 @@
 import React from 'react';
-import { Avatar } from '../Avatar/Avatar';
-import { TodoSearch } from '../TodoSearch/TodoSearch';
+import { Avatar } from '../Avatar';
+import { TodoSearch } from '../TodoSearch';
 
 function TodoNav() {
 
