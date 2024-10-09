@@ -2,20 +2,37 @@ import React from 'react';
 import avatar1x from './avatar@1x.png';
 import avatar2x from './avatar@2x.png';
 import avatar3x from './avatar@3x.png';
-import congratulations from './congratulations.gif';
+import congratulations from './congratulations-once.gif';
 
 function Avatar ({completedTodosCount,totalTodosCount}){
  
+    const [ showGif, setShowGif]= React.useState(false);
+    const [gifKey, setGifKey] = React.useState(0); // This is to make sure the reproduction reloading the gif
+
+
+    React.useEffect( () => {
+        if (completedTodosCount > 0 && completedTodosCount === totalTodosCount) {
+            setShowGif(true);
+            setGifKey(prevKey => prevKey + 1); 
+            const timer = setTimeout(() => setShowGif(false), 2000); 
+            return () => clearTimeout(timer);
+        }
+    }, [completedTodosCount, totalTodosCount])
+
     return (
 
         <div className="relative mb-4">
             
-            {totalTodosCount === 0|| completedTodosCount === totalTodosCount ? 
+            {showGif && 
                 <div className=" absolute top-[-10px] right-[-37px]">
-                    <img src={congratulations} className="w-16 block" alt=""  />
-                    
+                    <img 
+                        key={gifKey} 
+                        src={congratulations} 
+                        className={`w-16 ${!showGif ? 'hidden':'block'}`}
+                        alt="Felicitaciones" 
+                      />
                 </div>
-                : null }
+            }
              
             <img 
                 src={avatar1x} 
