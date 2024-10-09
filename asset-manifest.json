@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/TodoCheck/static/css/main.db7a7483.css",
-    "main.js": "/TodoCheck/static/js/main.27671871.js",
-    "static/media/congratulations-once.gif": "/TodoCheck/static/media/congratulations-once.0121ea42e91ad1659add.gif",
+    "main.js": "/TodoCheck/static/js/main.51c516df.js",
+    "static/media/congratulations.gif": "/TodoCheck/static/media/congratulations.902adc6c3f0cbe5d16da.gif",
     "static/media/avatar@3x.png": "/TodoCheck/static/media/avatar@3x.8d19f2b70b9a609785a0.png",
     "static/media/avatar@2x.png": "/TodoCheck/static/media/avatar@2x.9fb9e8d8f86f85cd711a.png",
     "static/media/signature.svg": "/TodoCheck/static/media/signature.cfea7a1db960eda048553586b2fdb4e4.svg",
@@ -19,10 +19,10 @@
     "static/media/icon-edit.svg": "/TodoCheck/static/media/icon-edit.336e740eb40ea73bc9cf9558dd3461ee.svg",
     "static/media/icon-plus.svg": "/TodoCheck/static/media/icon-plus.95f3017dc8c027f56ac80b5af47ff64a.svg",
     "main.db7a7483.css.map": "/TodoCheck/static/css/main.db7a7483.css.map",
-    "main.27671871.js.map": "/TodoCheck/static/js/main.27671871.js.map"
+    "main.51c516df.js.map": "/TodoCheck/static/js/main.51c516df.js.map"
   },
   "entrypoints": [
     "static/css/main.db7a7483.css",
-    "static/js/main.27671871.js"
+    "static/js/main.51c516df.js"
   ]
 }
