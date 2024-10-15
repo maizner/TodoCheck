@@ -8,7 +8,7 @@ function ChangeAlert({show, toggleShow}) {
             <div>
                 <p>Hubo cambios </p>
                 <button 
-                onClick={() => toggleShow(true)}
+                    onClick={() => toggleShow(true)}
                 >
                     Refrescar
                 </button>
@@ -26,4 +26,4 @@ function ChangeAlert({show, toggleShow}) {
     
 
 }
-export const ChangeAlertWSL = withStorageListener(ChangeAlert);
+export const ChangeAlertWithStorageListener = withStorageListener(ChangeAlert);

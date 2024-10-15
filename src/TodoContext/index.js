@@ -14,6 +14,7 @@ function TodoProvider({ children }) {
     const {
         item: todos,
         savePersistedItem: savePersistedTodo,
+        triggerStorageSynchro,
         loading,
         error,
     } = useLocalStorage('TODOS_V1', []);
@@ -185,6 +186,7 @@ function TodoProvider({ children }) {
             onUpdateTodoAction,
             openModal,
             setOpenModal,
+            triggerStorageSynchro,
             
         }}>
             {children}

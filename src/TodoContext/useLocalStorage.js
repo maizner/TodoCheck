@@ -6,6 +6,7 @@ function useLocalStorage(itemName, initialValue){
     const [item, setItem] = React.useState(initialValue);
     const [loading, setLoading] = React.useState(true);
     const [error, setError] = React.useState(false);
+    const [synchroStorage, setSynchroStorage] = React.useState(true);
 
 
 
@@ -29,6 +30,7 @@ function useLocalStorage(itemName, initialValue){
                 }
 
             setLoading(false);
+            setSynchroStorage(true)
 
             } catch(error) {
                 
@@ -40,7 +42,7 @@ function useLocalStorage(itemName, initialValue){
 
        }, 2000);
        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+    }, [synchroStorage]);
 
     
     //funcion para persistir los cambios. Esta se la pasaremos a accion de completar y borrar todos
@@ -50,11 +52,18 @@ function useLocalStorage(itemName, initialValue){
         );
         setItem(newItem);
     };
+
+    const triggerStorageSynchro = () => {
+        setLoading(true);
+        setSynchroStorage(false);
+
+    }
     return {
         item, 
         savePersistedItem,
         loading,
         error,
+        triggerStorageSynchro,
     }
 
 }

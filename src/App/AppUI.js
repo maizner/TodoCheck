@@ -14,7 +14,7 @@ import { TodoContext } from '../TodoContext';
 import { Footer } from '../Footer';
 import { Header } from '../Header';
 import { TodoFilters } from '../TodoFilters';
-import { ChangeAlertWSL } from '../ChangeAlert';
+import { ChangeAlertWithStorageListener } from '../ChangeAlert';
 
 function AppUI() {
     const {
@@ -37,7 +37,8 @@ function AppUI() {
         setEditingTodo,
         setOpenModal,
         openModal,
-        priorities
+        priorities,
+        triggerStorageSynchro,
     } = React.useContext(TodoContext);
 
     let todosToRender = todos;
@@ -111,7 +112,9 @@ function AppUI() {
                         />
                     </Modal>
                 )}
-                 <ChangeAlertWSL /> 
+                 <ChangeAlertWithStorageListener 
+                 synchronize = {triggerStorageSynchro}
+                 /> 
             </div>
             <Footer />
         </>
