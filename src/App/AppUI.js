@@ -60,7 +60,7 @@ function AppUI() {
     return (
         <>
             <Header />
-            <div className='flex flex-col content-center justify-center max-w-[580px] w-full px-3 py-3 md:px-8 md:py-10 bg-td-secondary-1 rounded-lg shadow-lg shadow-td-secondary-darken/10 '>
+            <div className='flex flex-col content-center justify-center max-w-[580px] w-full px-3 py-3 md:px-8 md:py-10 bg-td-secondary-1 rounded-lg shadow-lg shadow-td-secondary-darken/10'>
                 <div className='flex flex-col items-center justify-center w-full h-full md:flex-row md:justify-between'>
                     <Avatar 
                         completedTodosCount={completedTodosCount} 
