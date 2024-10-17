@@ -44,7 +44,7 @@ function useLocalStorage(itemName, initialValue){
        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [synchroStorage]);
 
-    
+    console.log('synchroStorage en storage: ', synchroStorage)
     //funcion para persistir los cambios. Esta se la pasaremos a accion de completar y borrar todos
     const savePersistedItem = (newItem) => {
         localStorage.setItem(
@@ -56,14 +56,15 @@ function useLocalStorage(itemName, initialValue){
     const triggerStorageSynchro = () => {
         setLoading(true);
         setSynchroStorage(false);
-
     }
+    
     return {
         item, 
         savePersistedItem,
         loading,
         error,
         triggerStorageSynchro,
+        synchroStorage,
     }
 
 }

@@ -37,7 +37,7 @@ function TodoProvider({ children }) {
         setSelectedPriority(null);  // Reiniciar la prioridad seleccionada
         setCompletedFilter(null);  // Limpiar el filtro de completado
         setFilterIsVisible(false);  // Cerrar el listado
-        console.log('Filtros limpiados');
+    
     }
 
     const completedTodosCount = todos.filter(

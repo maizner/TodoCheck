@@ -9,13 +9,12 @@ function TodosEmpty() {
 
     const {
         searchTerm,
-        selectedPriority,
-        completedFilter,
+        prioritizedTodos,
     } = React.useContext(TodoContext);
 
     const isSearchEmpty = searchTerm;
-    const isFilterEmpty = selectedPriority || completedFilter;
-    
+    const isFilterEmpty = prioritizedTodos ;
+  
   return (
     isSearchEmpty ? 
     <TodosEmptySearch searchText = {searchTerm} /> :

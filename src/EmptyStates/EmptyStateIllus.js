@@ -1,14 +1,14 @@
 import React from 'react';
-import { ReactComponent as IllustrationNoSearch } from './EmptyState-NoSearch.svg';
-import { ReactComponent as IllustrationNoTask } from './EmptyState-NoTask.svg';
-import { ReactComponent as IllustrationFilter } from './EmptyState-NoFilter.svg';
-import { ReactComponent as IllustrationError } from './EmptyState-Error.svg';
+import { ReactComponent as IllusNoSearch } from './EmptyState-NoSearch.svg';
+import { ReactComponent as IllusNoTask } from './EmptyState-NoTask.svg';
+import { ReactComponent as IllusFilter } from './EmptyState-NoFilter.svg';
+import { ReactComponent as IllusError } from './EmptyState-Error.svg';
 
 const icons = {
-  NoSearch: IllustrationNoSearch,
-  NoTask: IllustrationNoTask,
-  NoFilter: IllustrationFilter,
-  Error: IllustrationError,
+  NoSearch: IllusNoSearch,
+  NoTask: IllusNoTask,
+  NoFilter: IllusFilter,
+  Error: IllusError,
 };
 
 function EmptyStateIllus({ iconName, title, text }) {

@@ -14,7 +14,7 @@ function TodoList({error, loading, todosToRender,onError, onLoading, onEmpty, re
 
             {todosToRender.length > 0 && 
                 <ul className='TodoList min-h-[200px]'>
-                    {todosToRender.map(render)}
+                    {(!loading && !error) && todosToRender.map(render)}
                 </ul>
             } 
             
