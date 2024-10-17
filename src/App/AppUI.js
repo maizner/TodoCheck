@@ -14,7 +14,7 @@ import { TodoContext } from '../TodoContext';
 import { Footer } from '../Footer';
 import { Header } from '../Header';
 import { TodoFilters } from '../TodoFilters';
-import { ChangeAlertWithStorageListener } from '../ChangeAlert';
+import { ChangeAlert } from '../ChangeAlert';
 
 function AppUI() {
     const {
@@ -112,8 +112,8 @@ function AppUI() {
                         />
                     </Modal>
                 )}
-                 <ChangeAlertWithStorageListener 
-                 synchronize = {triggerStorageSynchro}
+                 <ChangeAlert 
+                 triggerStorageSynchro = {triggerStorageSynchro}
                  /> 
             </div>
             <Footer />
