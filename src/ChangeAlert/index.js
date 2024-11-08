@@ -2,8 +2,8 @@ import React from 'react';
 import useStorageListener from './useStorageListener';
 import { ReactComponent as IconReload } from '../icon-reload.svg';
 
-function ChangeAlert({ triggerStorageSynchro }) {
-    const { show, toggleShow } = useStorageListener({ triggerStorageSynchro });
+function ChangeAlert({ onSynchronize }) {
+    const { show, toggleShow } = useStorageListener({ onSynchronize });
 
     if (show) {
         return (

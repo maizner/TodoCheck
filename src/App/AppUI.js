@@ -38,9 +38,11 @@ function AppUI() {
         setOpenModal,
         openModal,
         priorities,
-        triggerStorageSynchro,
+        onSynchronize,
     } = React.useContext(TodoContext);
 
+
+    
     let todosToRender = todos;
     if (selectedPriority) {
         todosToRender = prioritizedTodos;
@@ -56,7 +58,6 @@ function AppUI() {
         setEditingTodo(todo);
         setOpenModal(true);
     };
-
     return (
         <>
             <Header />
@@ -113,8 +114,9 @@ function AppUI() {
                     </Modal>
                 )}
                  <ChangeAlert 
-                 triggerStorageSynchro = {triggerStorageSynchro}
+                 onSynchronize = {onSynchronize}
                  /> 
+                 
             </div>
             <Footer />
         </>

@@ -4,6 +4,7 @@ import { useLocalStorage } from './useLocalStorage';
 const TodoContext = React.createContext();
 
 function TodoProvider({ children }) {
+
     const [priorities] = React.useState({
         baja: { name: 'Baja', color: 'gray-500' },
         normal: { name: 'Normal', color: 'blue-200' },
@@ -14,10 +15,11 @@ function TodoProvider({ children }) {
     const {
         item: todos,
         savePersistedItem: savePersistedTodo,
-        triggerStorageSynchro,
+        onSynchronize,
         loading,
         error,
     } = useLocalStorage('TODOS_V1', []);
+    // console.log('Todos:', todos);
 
     const [searchTerm, setSearchTerm] = React.useState('');
     const [openModal, setOpenModal] = React.useState(false);
@@ -44,6 +46,7 @@ function TodoProvider({ children }) {
         todoElem => !!todoElem.completed
     ).length;
 
+    //Estados derivados o derived states = def:States created in base on other states 
     const totalTodosCount = todos.length;
 
     const searchedTodos = todos.filter(
@@ -83,13 +86,8 @@ function TodoProvider({ children }) {
         setActiveFilter((prevFilters) => [...prevFilters, filter]);
         setFilterIsVisible(false); // Cerrar el menú si es necesario
         
-      };
-
-      React.useEffect(() => {
-        console.log("completedFilter", completedFilter);
-    }, [completedFilter]);
+    };
   
-
     const handleSelectPriority = (priority) => {
 
         // Verificamos si la prioridad ya está seleccionada o no
@@ -186,7 +184,7 @@ function TodoProvider({ children }) {
             onUpdateTodoAction,
             openModal,
             setOpenModal,
-            triggerStorageSynchro,
+            onSynchronize,
             
         }}>
             {children}

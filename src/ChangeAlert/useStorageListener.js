@@ -1,7 +1,9 @@
 import React from 'react';
 
-function useStorageListener({ triggerStorageSynchro }) {
+function useStorageListener({ onSynchronize }) {
+
     const [storageChange, setStorageChange] = React.useState(false);
+
 
     window.addEventListener('storage', (change) => {
         if (change.key === 'TODOS_V1') {
@@ -10,8 +12,7 @@ function useStorageListener({ triggerStorageSynchro }) {
     });
 
     const onToggleShow = () => {
-        // Llamamos a la función pasada por props
-        triggerStorageSynchro();
+        onSynchronize();
         setStorageChange(false);
     };
 

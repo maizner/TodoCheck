@@ -3,13 +3,27 @@ import React from 'react';
 
 function useLocalStorage(itemName, initialValue){
     
-    const [item, setItem] = React.useState(initialValue);
-    const [loading, setLoading] = React.useState(true);
-    const [error, setError] = React.useState(false);
-    const [synchroStorage, setSynchroStorage] = React.useState(true);
+    const [state, dispatch] = React.useReducer(reducer, initialState({initialValue}));
+    const {synchroStorage,item,loading,error} = state;
 
-
-
+    //Action Creators
+    const onError = (error) => dispatch({
+        type: actionTypes.error, 
+        payload: error,
+    });
+    const onSuccess = (item) => dispatch({
+        type: actionTypes.success,
+        payload: item,
+    });
+    const onSave = (item) => dispatch({
+        type: actionTypes.save,
+        payload: item,
+    });
+    const onSynchronize = () => dispatch({
+        type: actionTypes.triggerSynchro
+    });
+   
+    //trigger synchro storage
     React.useEffect( ()=> {
 
        setTimeout(() => {
@@ -25,19 +39,14 @@ function useLocalStorage(itemName, initialValue){
                     parsedItem = initialValue;
                 } else {
                     parsedItem = JSON.parse(localStorageItem);
-                    setItem(parsedItem);
+                    onSave(parsedItem);
             
                 }
 
-            setLoading(false);
-            setSynchroStorage(true)
+                onSuccess(parsedItem)
 
             } catch(error) {
-                
-                // setError(error);
-                setError(true);
-                setLoading(false);
-
+                onError(error);
             }
 
        }, 2000);
@@ -45,28 +54,69 @@ function useLocalStorage(itemName, initialValue){
     }, [synchroStorage]);
 
 
-    //funcion para persistir los cambios. Esta se la pasaremos a accion de completar y borrar todos
     const savePersistedItem = (newItem) => {
         localStorage.setItem(
             itemName, JSON.stringify(newItem)
         );
-        setItem(newItem);
+        onSave(newItem);
     };
 
-    const triggerStorageSynchro = () => {
-        setLoading(true);
-        setSynchroStorage(false);
-    }
     
     return {
         item, 
         savePersistedItem,
         loading,
         error,
-        triggerStorageSynchro,
+        onSynchronize,
     }
 
 }
+
+const initialState = ({ initialValue}) => ({
+    synchroStorage:true,
+    item:initialValue,
+    loading:true,
+    error:false
+});
+
+const actionTypes = {
+    error:'ERROR', 
+    success: 'SUCCESS',
+    save: 'SAVE',
+    triggerSynchro: 'TRIGGERSYNCHRO'
+   
+}
+const reducerObject = ( state, payload) =>({
+
+    [actionTypes.error]: {
+        ...state,
+        error:true, 
+        loading: false,
+    },
+    [actionTypes.success]: {
+        ...state,
+        error:false,
+        loading: false,
+        synchroStorage:true, 
+        item: payload, 
+    },
+    [actionTypes.save]: {
+        ...state,
+        item: payload,
+    },
+    [actionTypes.triggerSynchro]: {
+        ...state,
+        loading: true,
+        synchroStorage:false, 
+    },
+
+})
+
+const reducer = ( state, action ) => {
+    return reducerObject(state, action.payload)[action.type] || state; 
+}
+
+
 export { useLocalStorage }
 
 // const defaultTodos = [
